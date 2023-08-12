@@ -19,13 +19,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https:\/\/8.8.4.4\/dns-query",
+                "address": "https://google.rayanbala.ir/go",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https:\/\/8.8.4.4\/dns-query",
+                "address": "https://google.rayanbala.ir/go",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
@@ -145,7 +145,7 @@
                 "GAFN-Kansas-II-MTN | 17",
                 "GAFN-Dusseldorf-II-MTN | 18"
             ],
-            "url": "https:\/\/detectportal.firefox.com\/success.txt",
+            "url": "http://valhala.rayanbala.ir/",
             "interval": "60s",
             "tolerance": 50
         },
