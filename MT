@@ -145,7 +145,7 @@
                 "GAFN-Kansas-II-MTN | 17",
                 "GAFN-Dusseldorf-II-MTN | 18"
             ],
-            "url": "http://valhala.rayanbala.ir/",
+            "url": "https://www.gstatic.com/generate_204",
             "interval": "60s",
             "tolerance": 50
         },
