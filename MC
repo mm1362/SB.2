@@ -169,7 +169,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker11.rayanbala.ir"
                 },
@@ -201,7 +201,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker22.medicaldream.ir"
                 },
@@ -233,7 +233,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker.rayanbala.ir"
                 },
@@ -265,7 +265,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker.medicaldream.ir"
                 },
@@ -297,7 +297,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker4.rayan1.workers.dev"
                 },
@@ -329,7 +329,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/?ed=2048",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker55.medicalsigns.link"
                 },
@@ -365,7 +365,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/vmess",
+                "path": "/vmess",
                 "headers": {
                     "Host": "80-b12f0dbc3a894ba4afa94486a13873ed.onpatr.cloud"
                 },
@@ -397,7 +397,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/222.mohammadmoazzen.repl.co\/20ac7536-1b8f-4797-8b18-841c7786f99f-vl",
+                "path": "/222.mohammadmoazzen.repl.co\/20ac7536-1b8f-4797-8b18-841c7786f99f-vl",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -429,7 +429,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/mms-mm1362.cloud.okteto.net\/vless",
+                "path": "/mms-mm1362.cloud.okteto.net\/vless",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -465,7 +465,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Dusseldorf.kotick.site\/speedtest",
+                "path": "/Dusseldorf.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -501,7 +501,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Kansas.kotick.site\/speedtest",
+                "path": "/Kansas.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -537,7 +537,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Amsterdam.kotick.site\/speedtest",
+                "path": "Amsterdam.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -573,7 +573,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Lille.kotick.site\/speedtest",
+                "path": "/Lille.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -609,7 +609,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/LosAngeles.kotick.site\/speedtest",
+                "path": "/LosAngeles.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -645,7 +645,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Lille.kotick.site\/speedtest",
+                "path": "/Lille.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -681,7 +681,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Amsterdam.kotick.site\/speedtest",
+                "path": "/Amsterdam.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -717,7 +717,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Dusseldorf.kotick.site\/speedtest",
+                "path": "/Dusseldorf.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -753,7 +753,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/\/Kansas.kotick.site\/speedtest",
+                "path": "/Kansas.kotick.site\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
