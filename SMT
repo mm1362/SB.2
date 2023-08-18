@@ -20,13 +20,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https://google.rayanbala.ir/go",
+                "address": "https://f8f16c52.d.adguard-dns.com/dns-query",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https://google.rayanbala.ir/go",
+                "address": "https://f8f16c52.d.adguard-dns.com/dns-query",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
