@@ -1,0 +1,571 @@
+{
+    "dns": {
+        "rules": [
+            {
+                "clash_mode": "global",
+                "server": "remote"
+            },
+            {
+                "clash_mode": "direct",
+                "server": "local"
+            },
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "local"
+            },
+            {
+                "geosite": "cn",
+                "server": "local"
+            }
+        ],
+        "servers": [
+            {
+                "address": "https://1.1.1.1/dns-query",
+                "detour": "select",
+                "tag": "remote"
+            },
+            {
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "direct",
+                "tag": "local"
+            }
+        ],
+        "strategy": "ipv4_only"
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "secret": "",
+            "store_selected": true
+        }
+    },
+    "inbounds": [
+        {
+            "auto_route": true,
+            "domain_strategy": "ipv4_only",
+            "endpoint_independent_nat": true,
+            "inet4_address": "172.19.0.1/30",
+            "mtu": 9000,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "strict_route": true,
+            "type": "tun"
+        },
+        {
+            "domain_strategy": "ipv4_only",
+            "listen": "127.0.0.1",
+            "listen_port": 2333,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "socks-in",
+            "type": "socks",
+            "users": []
+        },
+        {
+            "domain_strategy": "ipv4_only",
+            "listen": "127.0.0.1",
+            "listen_port": 2334,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "mixed-in",
+            "type": "mixed",
+            "users": []
+        }
+    ],
+    "log": {},
+    "outbounds": [
+        {
+            "tag": "select",
+            "type": "selector",
+            "default": "urltest",
+            "outbounds": [
+                "urltest",
+                "Russia-TG-MTN",
+                "Moldova-TG-MTN",
+                "Iceland-TG-MTN",
+                "Finland-TG-MTN",
+                "USA-SF-TG-MTN",
+                "Canada-TG-MTN",
+                "Chile-TG-MTN",
+                "Israel-Loc2-TG-MTN",
+                "Romani-TG-MTN",
+                "Ukraine-TG-MTN",
+                "Sweden-TG-MTN",
+                "Spain-TG-MTN",
+                "Norwey-TG-MTN",
+                "Tor",
+                "Slovakia-TG-SMT",
+                "Denmark-TG-SMT",
+                "Portugal-TG-SMT",
+                "Hungry-TG-SMT",
+                "Poland-TG-SMT",
+                "Brazil-TG-SMT",
+                "Russia-TG-MCI",
+                "Ukraine-TG-MCI",
+                "Netherlands-TG-MCI",
+                "Israel-Loc1-TG-MCI",
+                "Ireland-TG-MCI",
+                "Moldova-TG-MCI",
+                "Iceland-TG-MCI",
+                "Finland-TG-MCI",
+                "USA-SF-TG-MCI",
+                "Canada-TG-MCI",
+                "Romani-TG-MCI"
+            ]
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ru.secureconnect.me",
+            "server_port": 993,
+            "tag": "Russia-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "ru.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "md.secureconnect.me",
+            "server_port": 993,
+            "tag": "Moldova-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "md.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ice.secureconnect.me",
+            "server_port": 993,
+            "tag": "Iceland-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "ice.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "fn.secureconnect.me",
+            "server_port": 993,
+            "tag": "Finland-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "fn.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "us-sf.secureconnect.me",
+            "server_port": 993,
+            "tag": "USA-SF-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "us-sf.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "cavan.secureconnect.me",
+            "server_port": 993,
+            "tag": "Canada-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "cavan.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ch.secureconnect.me",
+            "server_port": 993,
+            "tag": "Chile-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "ch.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "isr-loc2.secureconnect.me",
+            "server_port": 993,
+            "tag": "Israel-Loc2-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "isr-loc2.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ro.secureconnect.me",
+            "server_port": 993,
+            "tag": "Romani-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "ro.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ukr.secureconnect.me",
+            "server_port": 7070,
+            "tag": "Ukraine-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "ukr.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "swe.secureconnect.me",
+            "server_port": 993,
+            "tag": "Sweden-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "swe.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "sp.secureconnect.me",
+            "server_port": 993,
+            "tag": "Spain-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "sp.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "no.secureconnect.me",
+            "server_port": 993,
+            "tag": "Norwey-TG-MTN",
+            "tls": {
+                "enabled": true,
+                "server_name": "no.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "server": "127.0.0.1",
+            "server_port": 9150,
+            "tag": "Tor",
+            "type": "socks",
+            "network": "tcp"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "slk.secureconnect.me",
+            "server_port": 993,
+            "tag": "Slovakia-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "slk.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "dn.secureconnect.me",
+            "server_port": 489,
+            "tag": "Denmark-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "dn.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "pg.secureconnect.me",
+            "server_port": 993,
+            "tag": "Portugal-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "pg.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "hg.secureconnect.me",
+            "server_port": 489,
+            "tag": "Hungry-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "hg.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "pl.secureconnect.me",
+            "server_port": 993,
+            "tag": "Poland-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "pl.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "br.secureconnect.me",
+            "server_port": 993,
+            "tag": "Brazil-TG-SMT",
+            "tls": {
+                "enabled": true,
+                "server_name": "br.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ru.secureconnect.me",
+            "server_port": 489,
+            "tag": "Russia-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "ru.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ukr.secureconnect.me",
+            "server_port": 489,
+            "tag": "Ukraine-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "ukr.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "nl.secureconnect.me",
+            "server_port": 489,
+            "tag": "Netherlands-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "nl.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "isr-loc1.secureconnect.me",
+            "server_port": 282,
+            "tag": "Israel-Loc1-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "isr-loc1.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ire.secureconnect.me",
+            "server_port": 489,
+            "tag": "Ireland-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "ire.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "md.secureconnect.me",
+            "server_port": 778,
+            "tag": "Moldova-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "md.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ice.secureconnect.me",
+            "server_port": 282,
+            "tag": "Iceland-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "ice.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "fn.secureconnect.me",
+            "server_port": 282,
+            "tag": "Finland-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "fn.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "us-sf.secureconnect.me",
+            "server_port": 489,
+            "tag": "USA-SF-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "us-sf.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "cavan.secureconnect.me",
+            "server_port": 778,
+            "tag": "Canada-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "cavan.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "password": "rayanbala.ir",
+            "server": "ro.secureconnect.me",
+            "server_port": 489,
+            "tag": "Romani-TG-MCI",
+            "tls": {
+                "enabled": true,
+                "server_name": "ro.secureconnect.me",
+                "insecure": true
+            },
+            "type": "http"
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "urltest",
+            "type": "urltest",
+            "outbounds": [
+                "Russia-TG-MTN",
+                "Moldova-TG-MTN",
+                "Iceland-TG-MTN",
+                "Finland-TG-MTN",
+                "USA-SF-TG-MTN",
+                "Canada-TG-MTN",
+                "Chile-TG-MTN",
+                "Israel-Loc2-TG-MTN",
+                "Romani-TG-MTN",
+                "Ukraine-TG-MTN",
+                "Sweden-TG-MTN",
+                "Spain-TG-MTN",
+                "Norwey-TG-MTN",
+                "Tor",
+                "Slovakia-TG-SMT",
+                "Denmark-TG-SMT",
+                "Portugal-TG-SMT",
+                "Hungry-TG-SMT",
+                "Poland-TG-SMT",
+                "Brazil-TG-SMT",
+                "Russia-TG-MCI",
+                "Ukraine-TG-MCI",
+                "Netherlands-TG-MCI",
+                "Israel-Loc1-TG-MCI",
+                "Ireland-TG-MCI",
+                "Moldova-TG-MCI",
+                "Iceland-TG-MCI",
+                "Finland-TG-MCI",
+                "USA-SF-TG-MCI",
+                "Canada-TG-MCI",
+                "Romani-TG-MCI"
+            ]
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "rules": [
+            {
+                "geosite": "category-ads-all",
+                "outbound": "block"
+            },
+            {
+                "outbound": "dns-out",
+                "protocol": "dns"
+            },
+            {
+                "clash_mode": "direct",
+                "outbound": "direct"
+            },
+            {
+                "clash_mode": "global",
+                "outbound": "select"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": "geolocation-!cn",
+                "outbound": "select"
+            },
+            {
+                "geosite": "cn",
+                "outbound": "direct"
+            }
+        ]
+    }
+}
