@@ -177,8 +177,8 @@
         "Romani-TG-MCI",
         "Tor"
       ],
-      "url": "https://detectportal.firefox.com/success.txt",
-      "interval": "1m0s"
+      "url": "http://speed.cloudflare.com/",
+      "interval": "3m0s"
     },
     {
       "tag": "Russia-TG-MTN",
