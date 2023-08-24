@@ -31,30 +31,6 @@
         "detour": "Best Latency"
       },
       {
-        "tag": "Lock Region ID-dns",
-        "address": "8.8.8.8",
-        "strategy": "ipv4_only",
-        "detour": "Lock Region ID"
-      },
-      {
-        "tag": "WhatsApp-dns",
-        "address": "8.8.4.4",
-        "strategy": "ipv4_only",
-        "detour": "WhatsApp"
-      },
-      {
-        "tag": "GAMESMAX(ML/FF/AOV)-dns",
-        "address": "8.8.4.4",
-        "strategy": "ipv4_only",
-        "detour": "GAMESMAX(ML/FF/AOV)"
-      },
-      {
-        "tag": "Route Port Game-dns",
-        "address": "9.9.9.9",
-        "strategy": "ipv4_only",
-        "detour": "Route Port Game"
-      },
-      {
         "tag": "direct-dns",
         "address": "149.112.112.112",
         "strategy": "ipv4_only",
@@ -81,11 +57,6 @@
         "rewrite_ttl": 20
       },
       {
-        "geosite": "rule-malicious",
-        "server": "block-dns",
-        "rewrite_ttl": 20
-      },
-      {
         "outbound": "Internet",
         "server": "Internet-dns",
         "rewrite_ttl": 20
@@ -93,26 +64,6 @@
       {
         "outbound": "Best Latency",
         "server": "Best Latency-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Lock Region ID",
-        "server": "Lock Region ID-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "WhatsApp",
-        "server": "WhatsApp-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "GAMESMAX(ML/FF/AOV)",
-        "server": "GAMESMAX(ML/FF/AOV)-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Route Port Game",
-        "server": "Route Port Game-dns",
         "rewrite_ttl": 20
       },
       {
@@ -211,62 +162,7 @@
         "USA-HOU",
         "USA-DAL-Loc2",
         "USA-NJ-Loc2",
-        "USA-CHI-Loc2",
-        "Poland 2",
-        "USA-SA 2",
-        "Brazil 2",
-        "Chile 2",
-        "Canada 2",
-        "Cavan 2",
-        "Mexico 2",
-        "USA-ATL 2",
-        "USA-LA 2",
-        "USA-FL 2",
-        "USA-DAL 2",
-        "USA-NJ 2",
-        "USA-NY 2",
-        "USA-CHI 2",
-        "USA-LV 2",
-        "USA-SF 2",
-        "USA-SLC 2",
-        "Austria 2",
-        "Belgium 2",
-        "Bulgaria 2",
-        "Czech 2",
-        "Denmark 2",
-        "Finland 2",
-        "France 2",
-        "Germany 2",
-        "Greece 2",
-        "Israel-Loc1 2",
-        "Israel-Loc2 2",
-        "Hungry 2",
-        "Iceland 2",
-        "Moldova 2",
-        "Ireland 2",
-        "Italy 2",
-        "Norwey 2",
-        "Portugal 2",
-        "Romani 2",
-        "Russia 2",
-        "Netherlans 2",
-        "Slovakia 2",
-        "Spain 2",
-        "Serbia 2",
-        "Swiss 2",
-        "Sweden 2",
-        "Turkey 2",
-        "Ukraine 2",
-        "UK 2",
-        "UAE 2",
-        "UK-MAN 2",
-        "South-Africa 2",
-        "CAMTL 2",
-        "USA-DEN 2",
-        "USA-HOU 2",
-        "USA-DAL-Loc2 2",
-        "USA-NJ-Loc2 2",
-        "USA-CHI-Loc2 2"
+        "USA-CHI-Loc2"
       ]
     },
     {
@@ -327,187 +223,16 @@
         "USA-HOU",
         "USA-DAL-Loc2",
         "USA-NJ-Loc2",
-        "USA-CHI-Loc2",
-        "Poland 2",
-        "USA-SA 2",
-        "Brazil 2",
-        "Chile 2",
-        "Canada 2",
-        "Cavan 2",
-        "Mexico 2",
-        "USA-ATL 2",
-        "USA-LA 2",
-        "USA-FL 2",
-        "USA-DAL 2",
-        "USA-NJ 2",
-        "USA-NY 2",
-        "USA-CHI 2",
-        "USA-LV 2",
-        "USA-SF 2",
-        "USA-SLC 2",
-        "Austria 2",
-        "Belgium 2",
-        "Bulgaria 2",
-        "Czech 2",
-        "Denmark 2",
-        "Finland 2",
-        "France 2",
-        "Germany 2",
-        "Greece 2",
-        "Israel-Loc1 2",
-        "Israel-Loc2 2",
-        "Hungry 2",
-        "Iceland 2",
-        "Moldova 2",
-        "Ireland 2",
-        "Italy 2",
-        "Norwey 2",
-        "Portugal 2",
-        "Romani 2",
-        "Russia 2",
-        "Netherlans 2",
-        "Slovakia 2",
-        "Spain 2",
-        "Serbia 2",
-        "Swiss 2",
-        "Sweden 2",
-        "Turkey 2",
-        "Ukraine 2",
-        "UK 2",
-        "UAE 2",
-        "UK-MAN 2",
-        "South-Africa 2",
-        "CAMTL 2",
-        "USA-DEN 2",
-        "USA-HOU 2",
-        "USA-DAL-Loc2 2",
-        "USA-NJ-Loc2 2",
-        "USA-CHI-Loc2 2"
+        "USA-CHI-Loc2"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "type": "selector",
-      "tag": "Lock Region ID",
-      "outbounds": [
-        "Poland",
-        "USA-SA",
-        "Brazil",
-        "Chile",
-        "Canada",
-        "Cavan",
-        "Mexico",
-        "USA-ATL",
-        "USA-LA",
-        "USA-FL",
-        "USA-DAL",
-        "USA-NJ",
-        "USA-NY",
-        "USA-CHI",
-        "USA-LV",
-        "USA-SF",
-        "USA-SLC",
-        "Austria",
-        "Belgium",
-        "Bulgaria",
-        "Czech",
-        "Denmark",
-        "Finland",
-        "France",
-        "Germany",
-        "Greece",
-        "Israel-Loc1",
-        "Israel-Loc2",
-        "Hungry",
-        "Iceland",
-        "Moldova",
-        "Ireland",
-        "Italy",
-        "Norwey",
-        "Portugal",
-        "Romani",
-        "Russia",
-        "Netherlans",
-        "Slovakia",
-        "Spain",
-        "Serbia",
-        "Swiss",
-        "Sweden",
-        "Turkey",
-        "Ukraine",
-        "UK",
-        "UAE",
-        "UK-MAN",
-        "South-Africa",
-        "CAMTL",
-        "USA-DEN",
-        "USA-HOU",
-        "USA-DAL-Loc2",
-        "USA-NJ-Loc2",
-        "USA-CHI-Loc2",
-        "Poland 2",
-        "USA-SA 2",
-        "Brazil 2",
-        "Chile 2",
-        "Canada 2",
-        "Cavan 2",
-        "Mexico 2",
-        "USA-ATL 2",
-        "USA-LA 2",
-        "USA-FL 2",
-        "USA-DAL 2",
-        "USA-NJ 2",
-        "USA-NY 2",
-        "USA-CHI 2",
-        "USA-LV 2",
-        "USA-SF 2",
-        "USA-SLC 2",
-        "Austria 2",
-        "Belgium 2",
-        "Bulgaria 2",
-        "Czech 2",
-        "Denmark 2",
-        "Finland 2",
-        "France 2",
-        "Germany 2",
-        "Greece 2",
-        "Israel-Loc1 2",
-        "Israel-Loc2 2",
-        "Hungry 2",
-        "Iceland 2",
-        "Moldova 2",
-        "Ireland 2",
-        "Italy 2",
-        "Norwey 2",
-        "Portugal 2",
-        "Romani 2",
-        "Russia 2",
-        "Netherlans 2",
-        "Slovakia 2",
-        "Spain 2",
-        "Serbia 2",
-        "Swiss 2",
-        "Sweden 2",
-        "Turkey 2",
-        "Ukraine 2",
-        "UK 2",
-        "UAE 2",
-        "UK-MAN 2",
-        "South-Africa 2",
-        "CAMTL 2",
-        "USA-DEN 2",
-        "USA-HOU 2",
-        "USA-DAL-Loc2 2",
-        "USA-NJ-Loc2 2",
-        "USA-CHI-Loc2 2"
-      ]
-    },
-    {
       "tag": "Poland",
       "type": "http",
       "server": "pl.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -520,7 +245,7 @@
       "tag": "USA-SA",
       "type": "http",
       "server": "us-sa.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -533,7 +258,7 @@
       "tag": "Brazil",
       "type": "http",
       "server": "br.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -546,7 +271,7 @@
       "tag": "Chile",
       "type": "http",
       "server": "ch.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -559,7 +284,7 @@
       "tag": "Canada",
       "type": "http",
       "server": "ca.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -572,7 +297,7 @@
       "tag": "Cavan",
       "type": "http",
       "server": "cavan.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -585,7 +310,7 @@
       "tag": "Mexico",
       "type": "http",
       "server": "mx.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -598,7 +323,7 @@
       "tag": "USA-ATL",
       "type": "http",
       "server": "us-atl.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -611,7 +336,7 @@
       "tag": "USA-LA",
       "type": "http",
       "server": "us-la.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -624,7 +349,7 @@
       "tag": "USA-FL",
       "type": "http",
       "server": "us-fl.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -637,7 +362,7 @@
       "tag": "USA-DAL",
       "type": "http",
       "server": "us-dal.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -650,7 +375,7 @@
       "tag": "USA-NJ",
       "type": "http",
       "server": "us-nj.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -663,7 +388,7 @@
       "tag": "USA-NY",
       "type": "http",
       "server": "us-ny.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -676,7 +401,7 @@
       "tag": "USA-CHI",
       "type": "http",
       "server": "us-chi.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -689,7 +414,7 @@
       "tag": "USA-LV",
       "type": "http",
       "server": "us-lv.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -702,7 +427,7 @@
       "tag": "USA-SF",
       "type": "http",
       "server": "us-sf.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -715,7 +440,7 @@
       "tag": "USA-SLC",
       "type": "http",
       "server": "us-slc.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -728,7 +453,7 @@
       "tag": "Austria",
       "type": "http",
       "server": "aus.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -741,7 +466,7 @@
       "tag": "Belgium",
       "type": "http",
       "server": "bg.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -754,7 +479,7 @@
       "tag": "Bulgaria",
       "type": "http",
       "server": "bul.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -767,7 +492,7 @@
       "tag": "Czech",
       "type": "http",
       "server": "cz.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -780,7 +505,7 @@
       "tag": "Denmark",
       "type": "http",
       "server": "dn.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -793,7 +518,7 @@
       "tag": "Finland",
       "type": "http",
       "server": "fn.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -806,7 +531,7 @@
       "tag": "France",
       "type": "http",
       "server": "fr.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -819,7 +544,7 @@
       "tag": "Germany",
       "type": "http",
       "server": "ger.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -832,7 +557,7 @@
       "tag": "Greece",
       "type": "http",
       "server": "gre.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -845,7 +570,7 @@
       "tag": "Israel-Loc1",
       "type": "http",
       "server": "isr-loc1.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -858,7 +583,7 @@
       "tag": "Israel-Loc2",
       "type": "http",
       "server": "isr-loc2.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -871,7 +596,7 @@
       "tag": "Hungry",
       "type": "http",
       "server": "hg.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -884,7 +609,7 @@
       "tag": "Iceland",
       "type": "http",
       "server": "ice.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -897,7 +622,7 @@
       "tag": "Moldova",
       "type": "http",
       "server": "md.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -910,7 +635,7 @@
       "tag": "Ireland",
       "type": "http",
       "server": "ire.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -923,7 +648,7 @@
       "tag": "Italy",
       "type": "http",
       "server": "it.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -936,7 +661,7 @@
       "tag": "Norwey",
       "type": "http",
       "server": "no.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -949,7 +674,7 @@
       "tag": "Portugal",
       "type": "http",
       "server": "pg.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -962,7 +687,7 @@
       "tag": "Romani",
       "type": "http",
       "server": "ro.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -975,7 +700,7 @@
       "tag": "Russia",
       "type": "http",
       "server": "ru.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -988,7 +713,7 @@
       "tag": "Netherlans",
       "type": "http",
       "server": "nl.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1001,7 +726,7 @@
       "tag": "Slovakia",
       "type": "http",
       "server": "slk.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1014,7 +739,7 @@
       "tag": "Spain",
       "type": "http",
       "server": "sp.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1027,7 +752,7 @@
       "tag": "Serbia",
       "type": "http",
       "server": "serbia.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1040,7 +765,7 @@
       "tag": "Swiss",
       "type": "http",
       "server": "swiss.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1053,7 +778,7 @@
       "tag": "Sweden",
       "type": "http",
       "server": "swe.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1066,7 +791,7 @@
       "tag": "Turkey",
       "type": "http",
       "server": "tk.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1079,7 +804,7 @@
       "tag": "Ukraine",
       "type": "http",
       "server": "ukr.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1092,7 +817,7 @@
       "tag": "UK",
       "type": "http",
       "server": "uk.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1105,7 +830,7 @@
       "tag": "UAE",
       "type": "http",
       "server": "uae.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1118,7 +843,7 @@
       "tag": "UK-MAN",
       "type": "http",
       "server": "uk.man.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1131,7 +856,7 @@
       "tag": "South-Africa",
       "type": "http",
       "server": "sa.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1144,7 +869,7 @@
       "tag": "CAMTL",
       "type": "http",
       "server": "camtl.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1157,7 +882,7 @@
       "tag": "USA-DEN",
       "type": "http",
       "server": "us-den.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1170,7 +895,7 @@
       "tag": "USA-HOU",
       "type": "http",
       "server": "us-hou.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1183,7 +908,7 @@
       "tag": "USA-DAL-Loc2",
       "type": "http",
       "server": "us-dal-loc2.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1196,7 +921,7 @@
       "tag": "USA-NJ-Loc2",
       "type": "http",
       "server": "us-nj-loc2.secureconnect.me",
-      "server_port": 993,
+      "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
       "tls": {
@@ -1209,19 +934,6 @@
       "tag": "USA-CHI-Loc2",
       "type": "http",
       "server": "us-chi-loc2.secureconnect.me",
-      "server_port": 993,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Poland 2",
-      "type": "http",
-      "server": "pl.secureconnect.me",
       "server_port": 23,
       "username": "mms.1362",
       "password": "rayanbala.ir",
@@ -1230,754 +942,6 @@
         "insecure": true
       },
       "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-SA 2",
-      "type": "http",
-      "server": "us-sa.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Brazil 2",
-      "type": "http",
-      "server": "br.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Chile 2",
-      "type": "http",
-      "server": "ch.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Canada 2",
-      "type": "http",
-      "server": "ca.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Cavan 2",
-      "type": "http",
-      "server": "cavan.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Mexico 2",
-      "type": "http",
-      "server": "mx.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-ATL 2",
-      "type": "http",
-      "server": "us-atl.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-LA 2",
-      "type": "http",
-      "server": "us-la.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-FL 2",
-      "type": "http",
-      "server": "us-fl.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-DAL 2",
-      "type": "http",
-      "server": "us-dal.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-NJ 2",
-      "type": "http",
-      "server": "us-nj.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-NY 2",
-      "type": "http",
-      "server": "us-ny.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-CHI 2",
-      "type": "http",
-      "server": "us-chi.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-LV 2",
-      "type": "http",
-      "server": "us-lv.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-SF 2",
-      "type": "http",
-      "server": "us-sf.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-SLC 2",
-      "type": "http",
-      "server": "us-slc.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Austria 2",
-      "type": "http",
-      "server": "aus.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Belgium 2",
-      "type": "http",
-      "server": "bg.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Bulgaria 2",
-      "type": "http",
-      "server": "bul.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Czech 2",
-      "type": "http",
-      "server": "cz.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Denmark 2",
-      "type": "http",
-      "server": "dn.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Finland 2",
-      "type": "http",
-      "server": "fn.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "France 2",
-      "type": "http",
-      "server": "fr.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Germany 2",
-      "type": "http",
-      "server": "ger.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Greece 2",
-      "type": "http",
-      "server": "gre.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Israel-Loc1 2",
-      "type": "http",
-      "server": "isr-loc1.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Israel-Loc2 2",
-      "type": "http",
-      "server": "isr-loc2.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Hungry 2",
-      "type": "http",
-      "server": "hg.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Iceland 2",
-      "type": "http",
-      "server": "ice.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Moldova 2",
-      "type": "http",
-      "server": "md.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Ireland 2",
-      "type": "http",
-      "server": "ire.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Italy 2",
-      "type": "http",
-      "server": "it.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Norwey 2",
-      "type": "http",
-      "server": "no.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Portugal 2",
-      "type": "http",
-      "server": "pg.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Romani 2",
-      "type": "http",
-      "server": "ro.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Russia 2",
-      "type": "http",
-      "server": "ru.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Netherlans 2",
-      "type": "http",
-      "server": "nl.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Slovakia 2",
-      "type": "http",
-      "server": "slk.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Spain 2",
-      "type": "http",
-      "server": "sp.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Serbia 2",
-      "type": "http",
-      "server": "serbia.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Swiss 2",
-      "type": "http",
-      "server": "swiss.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Sweden 2",
-      "type": "http",
-      "server": "swe.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Turkey 2",
-      "type": "http",
-      "server": "tk.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "Ukraine 2",
-      "type": "http",
-      "server": "ukr.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "UK 2",
-      "type": "http",
-      "server": "uk.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "UAE 2",
-      "type": "http",
-      "server": "uae.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "UK-MAN 2",
-      "type": "http",
-      "server": "uk.man.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "South-Africa 2",
-      "type": "http",
-      "server": "sa.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "CAMTL 2",
-      "type": "http",
-      "server": "camtl.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-DEN 2",
-      "type": "http",
-      "server": "us-den.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-HOU 2",
-      "type": "http",
-      "server": "us-hou.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-DAL-Loc2 2",
-      "type": "http",
-      "server": "us-dal-loc2.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-NJ-Loc2 2",
-      "type": "http",
-      "server": "us-nj-loc2.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "USA-CHI-Loc2 2",
-      "type": "http",
-      "server": "us-chi-loc2.secureconnect.me",
-      "server_port": 23,
-      "username": "mms.1362",
-      "password": "rayanbala.ir",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "type": "selector",
-      "tag": "WhatsApp",
-      "outbounds": [
-        "direct",
-        "Internet",
-        "Best Latency",
-        "Lock Region ID"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "GAMESMAX(ML/FF/AOV)",
-      "outbounds": [
-        "direct",
-        "Internet",
-        "Best Latency",
-        "Lock Region ID"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "Route Port Game",
-      "outbounds": [
-        "direct",
-        "Internet",
-        "Best Latency",
-        "Lock Region ID"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "Option ADs",
-      "outbounds": [
-        "block",
-        "Internet"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "Option P0rn",
-      "outbounds": [
-        "block",
-        "Internet"
-      ]
     },
     {
       "type": "direct",
@@ -2010,435 +974,6 @@
         "port": [
           53
         ]
-      },
-      {
-        "network": "udp",
-        "port": [
-          443
-        ],
-        "outbound": "block"
-      },
-      {
-        "domain_suffix": [
-          "googlesyndication.com"
-        ],
-        "outbound": "Internet"
-      },
-      {
-        "geosite": [
-          "rule-ads",
-          "oisd-full"
-        ],
-        "outbound": "Option ADs"
-      },
-      {
-        "geosite": [
-          "oisd-nsfw",
-          "category-porn"
-        ],
-        "outbound": "Option P0rn"
-      },
-      {
-        "geosite": "whatsapp",
-        "outbound": "WhatsApp"
-      },
-      {
-        "geoip": "facebook",
-        "port": [
-          3478,
-          4244,
-          5222,
-          5223,
-          5242,
-          45395,
-          50318,
-          59234
-        ],
-        "outbound": "WhatsApp"
-      },
-      {
-        "protocol": "stun",
-        "outbound": "Internet"
-      },
-      {
-        "geosite": [
-          "rule-indo"
-        ],
-        "outbound": "Lock Region ID"
-      },
-      {
-        "network": "udp",
-        "port": [
-          2702,
-          3702,
-          8443,
-          9120,
-          9992,
-          10003,
-          6006,
-          6008,
-          6674,
-          7889,
-          8008,
-          8130,
-          8443,
-          9008,
-          9120,
-          10100,
-          12008,
-          13008,
-          8011,
-          9030,
-          10491,
-          10612,
-          12235,
-          13004,
-          13748,
-          17000,
-          17500,
-          10039,
-          10096,
-          11455,
-          13894,
-          13972
-        ],
-        "port_range": [
-          "4001:4009",
-          "5000:5221",
-          "5224:5241",
-          "5243:5287",
-          "5289:5352",
-          "5354:5509",
-          "5517:5529",
-          "5551:5559",
-          "5601:5700",
-          "9000:9010",
-          "30000:30300",
-          "7006:7008",
-          "8001:8012",
-          "10000:10015",
-          "11000:11019",
-          "10101:10201",
-          "10080:10110",
-          "17000:18000"
-        ],
-        "outbound": "GAMESMAX(ML/FF/AOV)"
-      },
-      {
-        "network": "tcp",
-        "port": [
-          5517,
-          8443,
-          9443,
-          10003,
-          6006,
-          6008,
-          6674,
-          7889,
-          9006,
-          9137,
-          12006,
-          12008,
-          13006,
-          15006,
-          20561,
-          39003,
-          39006,
-          39698,
-          39779,
-          39800,
-          10012,
-          14000,
-          15692,
-          17000,
-          17500,
-          18081,
-          20371,
-          8013,
-          8085,
-          18082,
-          20000,
-          50000,
-          65010,
-          65050,
-          8013,
-          18082,
-          20166,
-          31003,
-          33445,
-          50000,
-          42472,
-          14422,
-          16999,
-          8013,
-          8888,
-          30031,
-          14009,
-          40005,
-          9339,
-          2099,
-          8088,
-          5692,
-          8085,
-          8500,
-          10000,
-          10082,
-          20000,
-          25000,
-          29134,
-          31003
-        ],
-        "port_range": [
-          "5000:5221",
-          "5224:5227",
-          "5229:5241",
-          "5243:5287",
-          "5289:5352",
-          "5354:5509",
-          "5520:5529",
-          "5551:5559",
-          "5601:5700",
-          "9000:9010",
-          "30000:30300",
-          "7006:7008",
-          "8001:8012",
-          "10000:10012",
-          "11000:11019",
-          "8085:8088",
-          "10000:10019",
-          "20000:20002",
-          "10000:10001",
-          "20000:20001",
-          "9330:9340",
-          "2080:2099",
-          "9100:9200",
-          "8230:8250",
-          "8110:8120",
-          "27000:28998",
-          "7770:7790",
-          "44590:44610",
-          "10500:10515",
-          "27015:27030",
-          "27036:27037",
-          "39190:39200",
-          "49001:49190",
-          "8393:8400"
-        ],
-        "outbound": "Route Port Game"
-      },
-      {
-        "network": "udp",
-        "port": [
-          2702,
-          3702,
-          8443,
-          9120,
-          9992,
-          10003,
-          6006,
-          6008,
-          6674,
-          7889,
-          8008,
-          8130,
-          8443,
-          9008,
-          9120,
-          10100,
-          12008,
-          13008,
-          8700,
-          10013,
-          10019,
-          10039,
-          10096,
-          10491,
-          10612,
-          11455,
-          12235,
-          13748,
-          13894,
-          13972,
-          17000,
-          17500,
-          8700,
-          9030,
-          8011,
-          9030,
-          10491,
-          10612,
-          12235,
-          13004,
-          13748,
-          17000,
-          17500,
-          10039,
-          10096,
-          11455,
-          13894,
-          13972,
-          42472,
-          5100,
-          39000,
-          4380,
-          27036,
-          14422,
-          16999,
-          8013,
-          8888,
-          8000,
-          30104,
-          14009,
-          40005,
-          8088,
-          5010,
-          6650,
-          8011,
-          8700,
-          20000,
-          25000,
-          29134,
-          30000
-        ],
-        "port_range": [
-          "4001:4009",
-          "5000:5221",
-          "5224:5241",
-          "5243:5287",
-          "5289:5352",
-          "5354:5509",
-          "5517:5529",
-          "5551:5559",
-          "5601:5700",
-          "9000:9010",
-          "30000:30300",
-          "7006:7008",
-          "8001:8012",
-          "10000:10015",
-          "11000:11019",
-          "7086:7995",
-          "8011:8013",
-          "9030:9031",
-          "20000:20002",
-          "12070:12460",
-          "41182:41192",
-          "7500:7995",
-          "10010:10019",
-          "20000:20001",
-          "10101:10201",
-          "10080:10110",
-          "17000:18000",
-          "5055:5058",
-          "22101:22102",
-          "9330:9340",
-          "27000:28998",
-          "16300:16350",
-          "40000:40010",
-          "60970:60980",
-          "27000:27031",
-          "40000:40010",
-          "7000:8000",
-          "8180:8181",
-          "27016:27024",
-          "54000:54012"
-        ],
-        "outbound": "Route Port Game"
-      },
-      {
-        "geoip": [
-          "id"
-        ],
-        "port": [
-          21,
-          22,
-          23,
-          80,
-          81,
-          123,
-          143,
-          182,
-          183,
-          194,
-          443,
-          465,
-          587,
-          853,
-          993,
-          995,
-          998,
-          2052,
-          2053,
-          2082,
-          2083,
-          2086,
-          2095,
-          2096,
-          5222,
-          5228,
-          5229,
-          5230,
-          8000,
-          8080,
-          8081,
-          8088,
-          8443,
-          8880,
-          8883,
-          8888,
-          8889,
-          42069
-        ],
-        "outbound": "Lock Region ID"
-      },
-      {
-        "port": [
-          21,
-          22,
-          23,
-          80,
-          81,
-          123,
-          143,
-          182,
-          183,
-          194,
-          443,
-          465,
-          587,
-          853,
-          993,
-          995,
-          998,
-          2052,
-          2053,
-          2082,
-          2083,
-          2086,
-          2095,
-          2096,
-          5222,
-          5228,
-          5229,
-          5230,
-          8000,
-          8080,
-          8081,
-          8088,
-          8443,
-          8880,
-          8883,
-          8888,
-          8889,
-          42069
-        ],
-        "outbound": "Internet"
-      },
-      {
-        "port_range": [
-          "1023:42068",
-          "42070:65535"
-        ],
-        "outbound": "Route Port Game"
       }
     ]
   }
