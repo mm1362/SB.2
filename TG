@@ -995,8 +995,8 @@
         "USA-NJ-Loc2 8",
         "USA-CHI-Loc2 8"
       ],
-      "url": "https://detectportal.firefox.com/success.txt",
-      "interval": "1m0s"
+      "url": "http://speed.cloudflare.com/",
+      "interval": "3m0s"
     },
     {
       "tag": "Poland",
