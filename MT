@@ -141,7 +141,7 @@
                 "GAFN-Dusseldorf-II-MTN | 18"
             ],
             "url": "http://speed.cloudflare.com/",
-            "interval": "300s",
+            "interval": "100s",
             "tolerance": 50
         },
         {
