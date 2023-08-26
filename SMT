@@ -142,7 +142,7 @@
                 "GAFN-Dusseldorf-II-SMT | 18"
             ],
             "url": "http://speed.cloudflare.com/",
-            "interval": "300s",
+            "interval": "100s",
             "tolerance": 50
         },
         {
