@@ -15,13 +15,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https://f62c887d.d.adguard-dns.com/dns-query",
+                "address": "159.69.236.62",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https://f62c887d.d.adguard-dns.com/dns-query",
+                "address": "176.9.1.117",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
