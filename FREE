@@ -184,7 +184,8 @@
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 80",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83"
+                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
+                "www.outline.network (JP) | 84"
             ]
         },
         {
@@ -273,7 +274,8 @@
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 80",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83"
+                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
+                "www.outline.network (JP) | 84"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "1m",
@@ -1106,6 +1108,16 @@
             "server_port": 8388,
             "method": "chacha20-ietf-poly1305",
             "password": "M2ViN",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "www.outline.network (JP) | 84",
+            "type": "shadowsocks",
+            "server": "ak1849.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
+            "server_port": 804,
+            "method": "chacha20-ietf-poly1305",
+            "password": "G!yBwPWH3Vao",
             "plugin": "",
             "plugin_opts": ""
         },
