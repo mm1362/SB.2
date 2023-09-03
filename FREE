@@ -185,7 +185,13 @@
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
-                "www.outline.network (JP) | 84"
+                "www.outline.network (JP) | 84",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 90"
             ]
         },
         {
@@ -275,7 +281,13 @@
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
                 "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
-                "www.outline.network (JP) | 84"
+                "www.outline.network (JP) | 84",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 90"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "1m",
@@ -1118,6 +1130,66 @@
             "server_port": 804,
             "method": "chacha20-ietf-poly1305",
             "password": "G!yBwPWH3Vao",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
+            "type": "shadowsocks",
+            "server": "51.105.59.7",
+            "server_port": 42153,
+            "method": "chacha20-ietf-poly1305",
+            "password": "ErvIU9zhApnrZBqfYczFBi",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
+            "type": "shadowsocks",
+            "server": "51.141.11.19",
+            "server_port": 39550,
+            "method": "chacha20-ietf-poly1305",
+            "password": "FljusGXaWhe8mAFaqwotpO",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
+            "type": "shadowsocks",
+            "server": "51.141.8.141",
+            "server_port": 26031,
+            "method": "chacha20-ietf-poly1305",
+            "password": "obKv8lzsLDmEYSpq5mOiJ8",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
+            "type": "shadowsocks",
+            "server": "46.183.184.61",
+            "server_port": 989,
+            "method": "aes-256-cfb",
+            "password": "f8f7aCzcPKbsF8p3",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
+            "type": "shadowsocks",
+            "server": "65.109.194.121",
+            "server_port": 1080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "9WdCZ7appSh2oGI251AKWw",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
+            "type": "shadowsocks",
+            "server": "51.141.11.92",
+            "server_port": 33131,
+            "method": "chacha20-ietf-poly1305",
+            "password": "ujbow8ZY46sUMEqvGfh7BT",
             "plugin": "",
             "plugin_opts": ""
         },
