@@ -25,7 +25,7 @@
                 "tag": "dns-remote"
             },
             {
-                "address": "https:\/\/dns.bitdefender.net\/dns-query",
+                "address": "https://f62c887d.d.adguard-dns.com/dns-query",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
