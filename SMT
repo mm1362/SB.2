@@ -259,7 +259,7 @@
                 "max_streams": 32
             },
             "tls": {
-                "enabled": true,
+                "enabled": false,
                 "server_name": "rep.rayanbala.ir",
                 "insecure": true,
                 "utls": {
@@ -325,7 +325,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "vpsfree.rayanbala.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
