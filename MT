@@ -261,7 +261,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "rep.rayanbala.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -325,7 +325,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "vpsfree.rayanbala.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
