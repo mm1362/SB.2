@@ -25,7 +25,7 @@
                 "tag": "dns-remote"
             },
             {
-                "address": "https://f62c887d.d.adguard-dns.com/dns-query",
+                "address": "https:\/\/dns.bitdefender.net\/dns-query",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
@@ -191,7 +191,22 @@
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 90"
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
+                "@IP_CF | 91",
+                "Join Telegram : ------@IP_CF------ | | 92",
+                "Join Telegram : ------@IP_CF------ | | 93",
+                "@IP_CF- FR | 94",
+                "@IP_CF- FR | 95",
+                "IP_CF🇫🇷FR | 96",
+                "@IP_CF FR | 97",
+                "@IP_CF-DE | 98",
+                "@IP_CF-FR | 99",
+                "@IP_CF-DE | 100",
+                "@IP_CF-FR | 101",
+                "IP_CF🇫🇷FR | 102",
+                "@IP_CF-DE | 103",
+                "www.outline.network (SG) | 104",
+                "@IP_CF-DE | 105"
             ]
         },
         {
@@ -287,7 +302,22 @@
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
                 "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 90"
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
+                "@IP_CF | 91",
+                "Join Telegram : ------@IP_CF------ | | 92",
+                "Join Telegram : ------@IP_CF------ | | 93",
+                "@IP_CF- FR | 94",
+                "@IP_CF- FR | 95",
+                "IP_CF🇫🇷FR | 96",
+                "@IP_CF FR | 97",
+                "@IP_CF-DE | 98",
+                "@IP_CF-FR | 99",
+                "@IP_CF-DE | 100",
+                "@IP_CF-FR | 101",
+                "IP_CF🇫🇷FR | 102",
+                "@IP_CF-DE | 103",
+                "www.outline.network (SG) | 104",
+                "@IP_CF-DE | 105"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "1m",
@@ -1190,6 +1220,156 @@
             "server_port": 33131,
             "method": "chacha20-ietf-poly1305",
             "password": "ujbow8ZY46sUMEqvGfh7BT",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF | 91",
+            "type": "shadowsocks",
+            "server": "series-g1.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "sgjJsZJHLlhmdvUk",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Join Telegram : ------@IP_CF------ | | 92",
+            "type": "shadowsocks",
+            "server": "162.19.18.235",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Join Telegram : ------@IP_CF------ | | 93",
+            "type": "shadowsocks",
+            "server": "162.19.139.36",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF- FR | 94",
+            "type": "shadowsocks",
+            "server": "162.19.204.76",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF- FR | 95",
+            "type": "shadowsocks",
+            "server": "162.19.83.14",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "IP_CF🇫🇷FR | 96",
+            "type": "shadowsocks",
+            "server": "51.178.87.37",
+            "server_port": 810,
+            "method": "chacha20-ietf-poly1305",
+            "password": "G!yBwPWH3Vao",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF FR | 97",
+            "type": "shadowsocks",
+            "server": "141.94.143.221",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-DE | 98",
+            "type": "shadowsocks",
+            "server": "162.19.170.209",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-FR | 99",
+            "type": "shadowsocks",
+            "server": "162.19.83.11",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-DE | 100",
+            "type": "shadowsocks",
+            "server": "162.19.170.210",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-FR | 101",
+            "type": "shadowsocks",
+            "server": "162.19.18.106",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "IP_CF🇫🇷FR | 102",
+            "type": "shadowsocks",
+            "server": "51.178.87.37",
+            "server_port": 805,
+            "method": "chacha20-ietf-poly1305",
+            "password": "G!yBwPWH3Vao",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-DE | 103",
+            "type": "shadowsocks",
+            "server": "57.129.1.20",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "www.outline.network (SG) | 104",
+            "type": "shadowsocks",
+            "server": "ak1852.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
+            "server_port": 8388,
+            "method": "chacha20-ietf-poly1305",
+            "password": "1q7RNKaIk2wYO8fEPmEX0vWQ7Va+QRTA",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-DE | 105",
+            "type": "shadowsocks",
+            "server": "162.19.170.208",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
             "plugin": "",
             "plugin_opts": ""
         },
