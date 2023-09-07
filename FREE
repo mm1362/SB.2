@@ -206,7 +206,12 @@
                 "IP_CF🇫🇷FR | 102",
                 "@IP_CF-DE | 103",
                 "www.outline.network (SG) | 104",
-                "@IP_CF-DE | 105"
+                "@IP_CF-DE | 105",
+                "Telegram ID : @IP_CF | 106",
+                "Telegram ID : @IP_CF | 107",
+                "Telegram ID : @IP_CF | 108",
+                "Telegram ID : @IP_CF | 109",
+                "Telegram ID : @IP_CF | 110"
             ]
         },
         {
@@ -317,7 +322,12 @@
                 "IP_CF🇫🇷FR | 102",
                 "@IP_CF-DE | 103",
                 "www.outline.network (SG) | 104",
-                "@IP_CF-DE | 105"
+                "@IP_CF-DE | 105",
+                "Telegram ID : @IP_CF | 106",
+                "Telegram ID : @IP_CF | 107",
+                "Telegram ID : @IP_CF | 108",
+                "Telegram ID : @IP_CF | 109",
+                "Telegram ID : @IP_CF | 110"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "1m",
@@ -1370,6 +1380,56 @@
             "server_port": 443,
             "method": "aes-256-cfb",
             "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Telegram ID : @IP_CF | 106",
+            "type": "shadowsocks",
+            "server": "3.28.178.166",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "sgjJsZJHLlhmdvUk",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Telegram ID : @IP_CF | 107",
+            "type": "shadowsocks",
+            "server": "37.218.241.130",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "j4wkIrreHEdC",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Telegram ID : @IP_CF | 108",
+            "type": "shadowsocks",
+            "server": "37.218.241.117",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "e9Ihcy7Kr4N2",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Telegram ID : @IP_CF | 109",
+            "type": "shadowsocks",
+            "server": "37.218.241.119",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "hr4TCNS2QChu",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Telegram ID : @IP_CF | 110",
+            "type": "shadowsocks",
+            "server": "37.218.241.126",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "RiAY0f9yGpbw",
             "plugin": "",
             "plugin_opts": ""
         },
