@@ -333,7 +333,7 @@
                 "www.outline.network (AE) | 114"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "1m",
+            "interval": "10m",
             "tolerance": 50
         },
         {
