@@ -141,7 +141,7 @@
                 "GAFN-Lille-III-MCI | 18"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "1m",
+            "interval": "2m",
             "tolerance": 50
         },
         {
