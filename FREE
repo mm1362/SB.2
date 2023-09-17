@@ -1,3 +1,9 @@
+//profile-title: base64:Q09OVkVSVEVEIEJZIFRWQw==
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/v2raycollector
+//profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
+
 {
     "log": {
         "disabled": false,
@@ -14,13 +20,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https://dns.controld.com/1e02nfn26u0",
+                "address": "address": "https://dns.controld.com/1e02nfn26u0",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https://dns.controld.com/1e02nfn26u0",
+                "address": "address": "https://dns.controld.com/1e02nfn26u0",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
@@ -142,75 +148,51 @@
                 "🇨🇦CA-158.69.122.231-0842 | 43",
                 "TOR.premium__@IP_CF | 44",
                 "il.premium__@IP_CF | 45",
-                "ro.premium.reserve__@IP_CF | 46",
-                "it.premium__@IP_CF | 47",
-                "gr.premium__@IP_CF | 48",
-                "mt.premium__@IP_CF | 49",
-                "hr.premium__@IP_CF | 50",
-                "gt.premium__@IP_CF | 51",
+                "gr.premium__@IP_CF | 46",
+                "mt.premium__@IP_CF | 47",
+                "hr.premium__@IP_CF | 48",
+                "gt.premium__@IP_CF | 49",
+                "Join Telegram : @IP_CF | #برای_مهسا | 50",
+                "Join Telegram : @IP_CF | #برای_مهسا | 51",
                 "Join Telegram : @IP_CF | #برای_مهسا | 52",
-                "Join Telegram : @IP_CF | #برای_مهسا | 53",
-                "Join Telegram : @IP_CF | #برای_مهسا | 54",
-                "Join Telegram : @IP_CF | #برای_مهسا | 55",
-                "Join Telegram : @IP_CF | #برای_مهسا | 56",
-                "Join Telegram : @IP_CF | #برای_مهسا | 57",
-                "Join Telegram : @IP_CF | Estekgraji SS | 58",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 59",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 60",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 61",
-                "Join Telegram : @IP_CF | Estekhraji | 62",
-                "Denver, United States @RoansoMods | 63",
-                "Dallas, United States @RoansoMods | 64",
-                "Las Vegas, United States @RoansoMods | 65",
-                "Las Vegas, United States @RoansoMods | 66",
-                "Houston, United States @RoansoMods | 67",
-                "Los Angeles, United States @RoansoMods | 68",
-                "Los Angeles, United States @RoansoMods | 69",
-                "Los Angeles, United States @RoansoMods | 70",
-                "Lancaster, United States @RoansoMods | 71",
-                "www.outline.network (FR) | 72",
-                "www.outline.network (GB) | 73",
-                "www.outline.network (FR) | 74",
-                "www.outline.network (GB) | 75",
-                "www.outline.network (CA) | 76",
-                "🇨🇦CA-158.69.122.231-0842 | 77",
-                "🇸🇰SK(Join Telegram : ------@IP_CF------ |) | 78",
-                "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 79",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 80",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
-                "www.outline.network (JP) | 84",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
-                "@IP_CF | 91",
-                "Join Telegram : ------@IP_CF------ | | 92",
-                "Join Telegram : ------@IP_CF------ | | 93",
-                "@IP_CF- FR | 94",
-                "@IP_CF- FR | 95",
-                "IP_CF🇫🇷FR | 96",
-                "@IP_CF FR | 97",
-                "@IP_CF-DE | 98",
-                "@IP_CF-FR | 99",
-                "@IP_CF-DE | 100",
-                "@IP_CF-FR | 101",
-                "IP_CF🇫🇷FR | 102",
-                "@IP_CF-DE | 103",
-                "www.outline.network (SG) | 104",
-                "@IP_CF-DE | 105",
-                "Telegram ID : @IP_CF | 106",
-                "Telegram ID : @IP_CF | 107",
-                "Telegram ID : @IP_CF | 108",
-                "Telegram ID : @IP_CF | 109",
-                "Telegram ID : @IP_CF | 110",
-                "www.outline.network (AU) | 111",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 112",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 113",
-                "www.outline.network (AE) | 114"
+                "Join Telegram : @IP_CF | Estekgraji SS | 53",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 54",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 55",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 56",
+                "Join Telegram : @IP_CF | Estekhraji | 57",
+                "Denver, United States @RoansoMods | 58",
+                "www.outline.network (FR) | 59",
+                "www.outline.network (GB) | 60",
+                "www.outline.network (FR) | 61",
+                "www.outline.network (GB) | 62",
+                "www.outline.network (CA) | 63",
+                "🇨🇦CA-158.69.122.231-0842 | 64",
+                "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 65",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 66",
+                "@IP_CF | 67",
+                "Join Telegram : ------@IP_CF------ | | 68",
+                "@IP_CF- FR | 69",
+                "@IP_CF- FR | 70",
+                "IP_CF🇫🇷FR | 71",
+                "@IP_CF FR | 72",
+                "@IP_CF-DE | 73",
+                "@IP_CF-FR | 74",
+                "@IP_CF-DE | 75",
+                "@IP_CF-FR | 76",
+                "www.outline.network (SG) | 77",
+                "Telegram ID : @IP_CF | 78",
+                "Telegram ID : @IP_CF | 79",
+                "Telegram ID : @IP_CF | 80",
+                "Telegram ID : @IP_CF | 81",
+                "Telegram ID : @IP_CF | 82",
+                "www.outline.network (AE) | 83",
+                "@IP_CF-DE | 84",
+                "Channel id: @IP_CF🇺🇸 | 85",
+                "Channel id: @IP_CF🇳🇱 | 86",
+                "@IP_CF- FR | 87",
+                "@IP_CF- FR | 88",
+                "Channel id: @IP_CF🇰🇿 | 89",
+                "Channel id: @IP_CF🇺🇲 | 90"
             ]
         },
         {
@@ -262,78 +244,54 @@
                 "🇨🇦CA-158.69.122.231-0842 | 43",
                 "TOR.premium__@IP_CF | 44",
                 "il.premium__@IP_CF | 45",
-                "ro.premium.reserve__@IP_CF | 46",
-                "it.premium__@IP_CF | 47",
-                "gr.premium__@IP_CF | 48",
-                "mt.premium__@IP_CF | 49",
-                "hr.premium__@IP_CF | 50",
-                "gt.premium__@IP_CF | 51",
+                "gr.premium__@IP_CF | 46",
+                "mt.premium__@IP_CF | 47",
+                "hr.premium__@IP_CF | 48",
+                "gt.premium__@IP_CF | 49",
+                "Join Telegram : @IP_CF | #برای_مهسا | 50",
+                "Join Telegram : @IP_CF | #برای_مهسا | 51",
                 "Join Telegram : @IP_CF | #برای_مهسا | 52",
-                "Join Telegram : @IP_CF | #برای_مهسا | 53",
-                "Join Telegram : @IP_CF | #برای_مهسا | 54",
-                "Join Telegram : @IP_CF | #برای_مهسا | 55",
-                "Join Telegram : @IP_CF | #برای_مهسا | 56",
-                "Join Telegram : @IP_CF | #برای_مهسا | 57",
-                "Join Telegram : @IP_CF | Estekgraji SS | 58",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 59",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 60",
-                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 61",
-                "Join Telegram : @IP_CF | Estekhraji | 62",
-                "Denver, United States @RoansoMods | 63",
-                "Dallas, United States @RoansoMods | 64",
-                "Las Vegas, United States @RoansoMods | 65",
-                "Las Vegas, United States @RoansoMods | 66",
-                "Houston, United States @RoansoMods | 67",
-                "Los Angeles, United States @RoansoMods | 68",
-                "Los Angeles, United States @RoansoMods | 69",
-                "Los Angeles, United States @RoansoMods | 70",
-                "Lancaster, United States @RoansoMods | 71",
-                "www.outline.network (FR) | 72",
-                "www.outline.network (GB) | 73",
-                "www.outline.network (FR) | 74",
-                "www.outline.network (GB) | 75",
-                "www.outline.network (CA) | 76",
-                "🇨🇦CA-158.69.122.231-0842 | 77",
-                "🇸🇰SK(Join Telegram : ------@IP_CF------ |) | 78",
-                "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 79",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 80",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
-                "www.outline.network (JP) | 84",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
-                "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
-                "@IP_CF | 91",
-                "Join Telegram : ------@IP_CF------ | | 92",
-                "Join Telegram : ------@IP_CF------ | | 93",
-                "@IP_CF- FR | 94",
-                "@IP_CF- FR | 95",
-                "IP_CF🇫🇷FR | 96",
-                "@IP_CF FR | 97",
-                "@IP_CF-DE | 98",
-                "@IP_CF-FR | 99",
-                "@IP_CF-DE | 100",
-                "@IP_CF-FR | 101",
-                "IP_CF🇫🇷FR | 102",
-                "@IP_CF-DE | 103",
-                "www.outline.network (SG) | 104",
-                "@IP_CF-DE | 105",
-                "Telegram ID : @IP_CF | 106",
-                "Telegram ID : @IP_CF | 107",
-                "Telegram ID : @IP_CF | 108",
-                "Telegram ID : @IP_CF | 109",
-                "Telegram ID : @IP_CF | 110",
-                "www.outline.network (AU) | 111",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 112",
-                "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 113",
-                "www.outline.network (AE) | 114"
+                "Join Telegram : @IP_CF | Estekgraji SS | 53",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 54",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 55",
+                "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 56",
+                "Join Telegram : @IP_CF | Estekhraji | 57",
+                "Denver, United States @RoansoMods | 58",
+                "www.outline.network (FR) | 59",
+                "www.outline.network (GB) | 60",
+                "www.outline.network (FR) | 61",
+                "www.outline.network (GB) | 62",
+                "www.outline.network (CA) | 63",
+                "🇨🇦CA-158.69.122.231-0842 | 64",
+                "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 65",
+                "💻 Channel 🆔 : @AlienVPN402 👽 | 66",
+                "@IP_CF | 67",
+                "Join Telegram : ------@IP_CF------ | | 68",
+                "@IP_CF- FR | 69",
+                "@IP_CF- FR | 70",
+                "IP_CF🇫🇷FR | 71",
+                "@IP_CF FR | 72",
+                "@IP_CF-DE | 73",
+                "@IP_CF-FR | 74",
+                "@IP_CF-DE | 75",
+                "@IP_CF-FR | 76",
+                "www.outline.network (SG) | 77",
+                "Telegram ID : @IP_CF | 78",
+                "Telegram ID : @IP_CF | 79",
+                "Telegram ID : @IP_CF | 80",
+                "Telegram ID : @IP_CF | 81",
+                "Telegram ID : @IP_CF | 82",
+                "www.outline.network (AE) | 83",
+                "@IP_CF-DE | 84",
+                "Channel id: @IP_CF🇺🇸 | 85",
+                "Channel id: @IP_CF🇳🇱 | 86",
+                "@IP_CF- FR | 87",
+                "@IP_CF- FR | 88",
+                "Channel id: @IP_CF🇰🇿 | 89",
+                "Channel id: @IP_CF🇺🇲 | 90"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "3m",
+            "interval": "5m",
             "tolerance": 50
         },
         {
@@ -787,27 +745,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "ro.premium.reserve__@IP_CF | 46",
-            "type": "shadowsocks",
-            "server": "194.14.217.89",
-            "server_port": 989,
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "it.premium__@IP_CF | 47",
-            "type": "shadowsocks",
-            "server": "5.188.226.43",
-            "server_port": 989,
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "gr.premium__@IP_CF | 48",
+            "tag": "gr.premium__@IP_CF | 46",
             "type": "shadowsocks",
             "server": "192.71.166.102",
             "server_port": 989,
@@ -817,7 +755,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "mt.premium__@IP_CF | 49",
+            "tag": "mt.premium__@IP_CF | 47",
             "type": "shadowsocks",
             "server": "171.22.254.17",
             "server_port": 989,
@@ -827,7 +765,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "hr.premium__@IP_CF | 50",
+            "tag": "hr.premium__@IP_CF | 48",
             "type": "shadowsocks",
             "server": "46.183.184.64",
             "server_port": 989,
@@ -837,7 +775,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "gt.premium__@IP_CF | 51",
+            "tag": "gt.premium__@IP_CF | 49",
             "type": "shadowsocks",
             "server": "170.80.111.5",
             "server_port": 989,
@@ -847,37 +785,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 52",
-            "type": "shadowsocks",
-            "server": "140.99.6.194",
-            "server_port": 5000,
-            "method": "aes-256-gcm",
-            "password": "Y6R9pAtvxxzmGC",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 53",
-            "type": "shadowsocks",
-            "server": "816.outline-vpn.cloud",
-            "server_port": 9098,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ksjfuw!sop#",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 54",
-            "type": "shadowsocks",
-            "server": "23.150.248.191",
-            "server_port": 9098,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ksjfuw!sop#",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 55",
+            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 50",
             "type": "shadowsocks",
             "server": "69.50.95.251",
             "server_port": 9098,
@@ -887,7 +795,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 56",
+            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 51",
             "type": "shadowsocks",
             "server": "series-a2-mec.samanehha.co",
             "server_port": 443,
@@ -897,7 +805,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 57",
+            "tag": "Join Telegram : @IP_CF | #برای_مهسا | 52",
             "type": "shadowsocks",
             "server": "series-a2.samanehha.co",
             "server_port": 443,
@@ -907,7 +815,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : @IP_CF | Estekgraji SS | 58",
+            "tag": "Join Telegram : @IP_CF | Estekgraji SS | 53",
             "type": "shadowsocks",
             "server": "31.172.67.43",
             "server_port": 443,
@@ -917,7 +825,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 59",
+            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 54",
             "type": "shadowsocks",
             "server": "series-a1.samanehha.co",
             "server_port": 443,
@@ -927,7 +835,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 60",
+            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 55",
             "type": "shadowsocks",
             "server": "series-a2-me.samanehha.co",
             "server_port": 443,
@@ -937,7 +845,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 61",
+            "tag": "🇩🇪Join Telegram : @IP_CF | Estekgraji SS | 56",
             "type": "shadowsocks",
             "server": "series-a2.samanehha.co",
             "server_port": 443,
@@ -947,7 +855,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : @IP_CF | Estekhraji | 62",
+            "tag": "Join Telegram : @IP_CF | Estekhraji | 57",
             "type": "shadowsocks",
             "server": "series-a2-me.samanehha.co",
             "server_port": 443,
@@ -957,7 +865,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Denver, United States @RoansoMods | 63",
+            "tag": "Denver, United States @RoansoMods | 58",
             "type": "shadowsocks",
             "server": "69.50.95.251",
             "server_port": 9098,
@@ -967,87 +875,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Dallas, United States @RoansoMods | 64",
-            "type": "shadowsocks",
-            "server": "23.150.248.191",
-            "server_port": 9098,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ksjfuw!sop#",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Las Vegas, United States @RoansoMods | 65",
-            "type": "shadowsocks",
-            "server": "86.38.4.73",
-            "server_port": 8881,
-            "method": "aes-256-gcm",
-            "password": "kDWvXYZoTBcGkC4",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Las Vegas, United States @RoansoMods | 66",
-            "type": "shadowsocks",
-            "server": "86.38.4.73",
-            "server_port": 8881,
-            "method": "aes-256-gcm",
-            "password": "kDWvXYZoTBcGkC4",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Houston, United States @RoansoMods | 67",
-            "type": "shadowsocks",
-            "server": "140.99.53.242",
-            "server_port": 7307,
-            "method": "aes-256-gcm",
-            "password": "FoOiGlkAA9yPEGP",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Los Angeles, United States @RoansoMods | 68",
-            "type": "shadowsocks",
-            "server": "140.99.6.194",
-            "server_port": 5000,
-            "method": "aes-256-gcm",
-            "password": "Y6R9pAtvxxzmGC",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Los Angeles, United States @RoansoMods | 69",
-            "type": "shadowsocks",
-            "server": "140.99.6.58",
-            "server_port": 5500,
-            "method": "aes-256-gcm",
-            "password": "KixLvKzwjekG00rm",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Los Angeles, United States @RoansoMods | 70",
-            "type": "shadowsocks",
-            "server": "140.99.6.42",
-            "server_port": 8888,
-            "method": "aes-256-gcm",
-            "password": "Y6R9pAtvxxzmGC",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Lancaster, United States @RoansoMods | 71",
-            "type": "shadowsocks",
-            "server": "140.99.202.42",
-            "server_port": 5600,
-            "method": "aes-256-gcm",
-            "password": "Y6R9pAtvxxzmGC",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "www.outline.network (FR) | 72",
+            "tag": "www.outline.network (FR) | 59",
             "type": "shadowsocks",
             "server": "ak1686.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 810,
@@ -1057,7 +885,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "www.outline.network (GB) | 73",
+            "tag": "www.outline.network (GB) | 60",
             "type": "shadowsocks",
             "server": "ak1661.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 8080,
@@ -1067,7 +895,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "www.outline.network (FR) | 74",
+            "tag": "www.outline.network (FR) | 61",
             "type": "shadowsocks",
             "server": "ak1772.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 810,
@@ -1077,7 +905,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "www.outline.network (GB) | 75",
+            "tag": "www.outline.network (GB) | 62",
             "type": "shadowsocks",
             "server": "ak1757.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 8080,
@@ -1087,7 +915,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "www.outline.network (CA) | 76",
+            "tag": "www.outline.network (CA) | 63",
             "type": "shadowsocks",
             "server": "ak1819.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 80,
@@ -1097,7 +925,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "🇨🇦CA-158.69.122.231-0842 | 77",
+            "tag": "🇨🇦CA-158.69.122.231-0842 | 64",
             "type": "shadowsocks",
             "server": "158.69.122.231",
             "server_port": 80,
@@ -1107,17 +935,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "🇸🇰SK(Join Telegram : ------@IP_CF------ |) | 78",
-            "type": "shadowsocks",
-            "server": "185.48.248.126",
-            "server_port": 444,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Onsheypy",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 79",
+            "tag": "🇺🇸US(Join Telegram : ------@IP_CF------ |)_798 | 65",
             "type": "shadowsocks",
             "server": "205.134.180.145",
             "server_port": 443,
@@ -1127,87 +945,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 80",
-            "type": "shadowsocks",
-            "server": "51.79.50.242",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "MDlkN",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 81",
-            "type": "shadowsocks",
-            "server": "141.95.86.170",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "NDBjM",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ ᴀᴍɪʀʀᴀɴɢᴇʀ | 82",
-            "type": "shadowsocks",
-            "server": "51.195.218.78",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "YmUwN",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------ Arash | 83",
-            "type": "shadowsocks",
-            "server": "92.222.167.23",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "M2ViN",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "www.outline.network (JP) | 84",
-            "type": "shadowsocks",
-            "server": "ak1849.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 804,
-            "method": "chacha20-ietf-poly1305",
-            "password": "G!yBwPWH3Vao",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 85",
-            "type": "shadowsocks",
-            "server": "51.105.59.7",
-            "server_port": 42153,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ErvIU9zhApnrZBqfYczFBi",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 86",
-            "type": "shadowsocks",
-            "server": "51.141.11.19",
-            "server_port": 39550,
-            "method": "chacha20-ietf-poly1305",
-            "password": "FljusGXaWhe8mAFaqwotpO",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 87",
-            "type": "shadowsocks",
-            "server": "51.141.8.141",
-            "server_port": 26031,
-            "method": "chacha20-ietf-poly1305",
-            "password": "obKv8lzsLDmEYSpq5mOiJ8",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 88",
+            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 66",
             "type": "shadowsocks",
             "server": "46.183.184.61",
             "server_port": 989,
@@ -1217,27 +955,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 89",
-            "type": "shadowsocks",
-            "server": "65.109.194.121",
-            "server_port": 1080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "9WdCZ7appSh2oGI251AKWw",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "💻 Channel 🆔 : @AlienVPN402 👽 | 90",
-            "type": "shadowsocks",
-            "server": "51.141.11.92",
-            "server_port": 33131,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ujbow8ZY46sUMEqvGfh7BT",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "@IP_CF | 91",
+            "tag": "@IP_CF | 67",
             "type": "shadowsocks",
             "server": "series-g1.samanehha.co",
             "server_port": 443,
@@ -1247,7 +965,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : ------@IP_CF------ | | 92",
+            "tag": "Join Telegram : ------@IP_CF------ | | 68",
             "type": "shadowsocks",
             "server": "162.19.18.235",
             "server_port": 443,
@@ -1257,17 +975,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Join Telegram : ------@IP_CF------ | | 93",
-            "type": "shadowsocks",
-            "server": "162.19.139.36",
-            "server_port": 443,
-            "method": "aes-256-cfb",
-            "password": "asdKkaskJKfnsa",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "@IP_CF- FR | 94",
+            "tag": "@IP_CF- FR | 69",
             "type": "shadowsocks",
             "server": "162.19.204.76",
             "server_port": 443,
@@ -1277,7 +985,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF- FR | 95",
+            "tag": "@IP_CF- FR | 70",
             "type": "shadowsocks",
             "server": "162.19.83.14",
             "server_port": 443,
@@ -1287,7 +995,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "IP_CF🇫🇷FR | 96",
+            "tag": "IP_CF🇫🇷FR | 71",
             "type": "shadowsocks",
             "server": "51.178.87.37",
             "server_port": 810,
@@ -1297,7 +1005,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF FR | 97",
+            "tag": "@IP_CF FR | 72",
             "type": "shadowsocks",
             "server": "141.94.143.221",
             "server_port": 443,
@@ -1307,7 +1015,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF-DE | 98",
+            "tag": "@IP_CF-DE | 73",
             "type": "shadowsocks",
             "server": "162.19.170.209",
             "server_port": 443,
@@ -1317,7 +1025,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF-FR | 99",
+            "tag": "@IP_CF-FR | 74",
             "type": "shadowsocks",
             "server": "162.19.83.11",
             "server_port": 443,
@@ -1327,7 +1035,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF-DE | 100",
+            "tag": "@IP_CF-DE | 75",
             "type": "shadowsocks",
             "server": "162.19.170.210",
             "server_port": 443,
@@ -1337,7 +1045,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF-FR | 101",
+            "tag": "@IP_CF-FR | 76",
             "type": "shadowsocks",
             "server": "162.19.18.106",
             "server_port": 443,
@@ -1347,27 +1055,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "IP_CF🇫🇷FR | 102",
-            "type": "shadowsocks",
-            "server": "51.178.87.37",
-            "server_port": 805,
-            "method": "chacha20-ietf-poly1305",
-            "password": "G!yBwPWH3Vao",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "@IP_CF-DE | 103",
-            "type": "shadowsocks",
-            "server": "57.129.1.20",
-            "server_port": 443,
-            "method": "aes-256-cfb",
-            "password": "asdKkaskJKfnsa",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "www.outline.network (SG) | 104",
+            "tag": "www.outline.network (SG) | 77",
             "type": "shadowsocks",
             "server": "ak1852.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 8388,
@@ -1377,17 +1065,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "@IP_CF-DE | 105",
-            "type": "shadowsocks",
-            "server": "162.19.170.208",
-            "server_port": 443,
-            "method": "aes-256-cfb",
-            "password": "asdKkaskJKfnsa",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "Telegram ID : @IP_CF | 106",
+            "tag": "Telegram ID : @IP_CF | 78",
             "type": "shadowsocks",
             "server": "3.28.178.166",
             "server_port": 443,
@@ -1397,7 +1075,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Telegram ID : @IP_CF | 107",
+            "tag": "Telegram ID : @IP_CF | 79",
             "type": "shadowsocks",
             "server": "37.218.241.130",
             "server_port": 443,
@@ -1407,7 +1085,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Telegram ID : @IP_CF | 108",
+            "tag": "Telegram ID : @IP_CF | 80",
             "type": "shadowsocks",
             "server": "37.218.241.117",
             "server_port": 443,
@@ -1417,7 +1095,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Telegram ID : @IP_CF | 109",
+            "tag": "Telegram ID : @IP_CF | 81",
             "type": "shadowsocks",
             "server": "37.218.241.119",
             "server_port": 443,
@@ -1427,7 +1105,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "Telegram ID : @IP_CF | 110",
+            "tag": "Telegram ID : @IP_CF | 82",
             "type": "shadowsocks",
             "server": "37.218.241.126",
             "server_port": 443,
@@ -1437,42 +1115,82 @@
             "plugin_opts": ""
         },
         {
-            "tag": "www.outline.network (AU) | 111",
-            "type": "shadowsocks",
-            "server": "ak1855.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ascB9jQOONWQXmz0Yzeduo",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 112",
-            "type": "shadowsocks",
-            "server": "51.195.218.197",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ODkwM",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "--------#Women_Life_Freedom--------Join Telegram : ------@IP_CF------AmirRanger | 113",
-            "type": "shadowsocks",
-            "server": "141.94.76.177",
-            "server_port": 8388,
-            "method": "chacha20-ietf-poly1305",
-            "password": "MDA5Y",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "www.outline.network (AE) | 114",
+            "tag": "www.outline.network (AE) | 83",
             "type": "shadowsocks",
             "server": "ak1857.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF-DE | 84",
+            "type": "shadowsocks",
+            "server": "162.19.170.210",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Channel id: @IP_CF🇺🇸 | 85",
+            "type": "shadowsocks",
+            "server": "205.134.180.147",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "9Bvkw5aupNy8",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Channel id: @IP_CF🇳🇱 | 86",
+            "type": "shadowsocks",
+            "server": "77.91.122.158",
+            "server_port": 80,
+            "method": "chacha20-ietf-poly1305",
+            "password": "j8OV5ynG6eqgkBjq1E6bQm",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF- FR | 87",
+            "type": "shadowsocks",
+            "server": "162.19.204.76",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "@IP_CF- FR | 88",
+            "type": "shadowsocks",
+            "server": "162.19.18.235",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Channel id: @IP_CF🇰🇿 | 89",
+            "type": "shadowsocks",
+            "server": "93.170.73.104",
+            "server_port": 51348,
+            "method": "chacha20-ietf-poly1305",
+            "password": "AGr56G65GFgl7phobMoits",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "Channel id: @IP_CF🇺🇲 | 90",
+            "type": "shadowsocks",
+            "server": "205.134.180.143",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "R9Xc4dHXGv3c",
             "plugin": "",
             "plugin_opts": ""
         },
