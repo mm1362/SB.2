@@ -103,18 +103,19 @@
                 "Replit-USA-MTN | 4",
                 "Okteto-MTN | 5",
                 "ES-Avatel-MTN | 6",
-                "GAFN-Dusseldorf-MTN | 7",
-                "GAFN-Kansas-MTN | 8",
-                "GAFN-Amsterdam-MTN | 9",
-                "GAFN-Lille-MTN | 10",
-                "GAFN-Lille-II-MTN | 11",
-                "GAFN-Amsterdam-II-MTN | 12",
-                "GAFN-Kansas-II-MTN | 13",
-                "GAFN-Dusseldorf-II-MTN | 14",
-                "GAFN-Lille-III-MTN | 15",
-                "GAFN-Amsterdam-III-MTN | 16",
-                "GAFN-Kansas-III-MTN | 17",
-                "GAFN-Dusseldorf-III-MTN | 18"
+                "Worker-IV-MCI | 7",
+                "GAFN-Dusseldorf-MTN | 8",
+                "GAFN-Kansas-MTN | 9",
+                "GAFN-Amsterdam-MTN | 10",
+                "GAFN-Lille-MTN | 11",
+                "GAFN-Lille-II-MTN | 12",
+                "GAFN-Amsterdam-II-MTN | 13",
+                "GAFN-Kansas-II-MTN | 14",
+                "GAFN-Dusseldorf-II-MTN | 15",
+                "GAFN-Lille-III-MTN-PC | 16",
+                "GAFN-Amsterdam-III-MTN-PC | 17",
+                "GAFN-Kansas-III-MTN-PC | 18",
+                "GAFN-Dusseldorf-III-MTN-PC | 19"
             ]
         },
         {
@@ -127,21 +128,22 @@
                 "Replit-USA-MTN | 4",
                 "Okteto-MTN | 5",
                 "ES-Avatel-MTN | 6",
-                "GAFN-Dusseldorf-MTN | 7",
-                "GAFN-Kansas-MTN | 8",
-                "GAFN-Amsterdam-MTN | 9",
-                "GAFN-Lille-MTN | 10",
-                "GAFN-Lille-II-MTN | 11",
-                "GAFN-Amsterdam-II-MTN | 12",
-                "GAFN-Kansas-II-MTN | 13",
-                "GAFN-Dusseldorf-II-MTN | 14",
-                "GAFN-Lille-III-MTN | 15",
-                "GAFN-Amsterdam-III-MTN | 16",
-                "GAFN-Kansas-III-MTN | 17",
-                "GAFN-Dusseldorf-III-MTN | 18"
+                "Worker-IV-MCI | 7",
+                "GAFN-Dusseldorf-MTN | 8",
+                "GAFN-Kansas-MTN | 9",
+                "GAFN-Amsterdam-MTN | 10",
+                "GAFN-Lille-MTN | 11",
+                "GAFN-Lille-II-MTN | 12",
+                "GAFN-Amsterdam-II-MTN | 13",
+                "GAFN-Kansas-II-MTN | 14",
+                "GAFN-Dusseldorf-II-MTN | 15",
+                "GAFN-Lille-III-MTN-PC | 16",
+                "GAFN-Amsterdam-III-MTN-PC | 17",
+                "GAFN-Kansas-III-MTN-PC | 18",
+                "GAFN-Dusseldorf-III-MTN-PC | 19"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "2m",
+            "interval": "3m",
             "tolerance": 50
         },
         {
@@ -160,7 +162,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "worker.rayanbala.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -168,11 +170,11 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
                     "Host": "worker.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
@@ -192,7 +194,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "worker.medicaldream.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -200,11 +202,11 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
                     "Host": "worker.medicaldream.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
@@ -224,7 +226,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "worker55.medicalsigns.link",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -232,11 +234,11 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
                     "Host": "worker55.medicalsigns.link"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
@@ -264,7 +266,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/222.mohammadmoazzen.repl.co/20ac7536-1b8f-4797-8b18-841c7786f99f-vl",
+                "path": "\/222.mohammadmoazzen.repl.co\/20ac7536-1b8f-4797-8b18-841c7786f99f-vl",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -288,7 +290,7 @@
             "tls": {
                 "enabled": true,
                 "server_name": "rep.rayanbala.ir",
-                "insecure": true,
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -296,7 +298,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/mms-mm1362.cloud.okteto.net/vless",
+                "path": "\/mms-mm1362.cloud.okteto.net\/vless",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -328,16 +330,48 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/argo-vless?ed=2048",
+                "path": "\/argo-vless",
                 "headers": {
                     "Host": "vpsfree.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-MTN | 7",
+            "tag": "Worker-IV-MCI | 7",
+            "type": "vless",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "88ad2fd8-e7fa-49f5-af06-085d35ced70b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "worker.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-MTN | 8",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -364,7 +398,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.kotick.site/speedtest",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -373,7 +407,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-MTN | 8",
+            "tag": "GAFN-Kansas-MTN | 9",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -400,7 +434,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.kotick.site/speedtest",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -409,7 +443,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-MTN | 9",
+            "tag": "GAFN-Amsterdam-MTN | 10",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -436,7 +470,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.kotick.site/speedtest",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -445,7 +479,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-MTN | 10",
+            "tag": "GAFN-Lille-MTN | 11",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -472,7 +506,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.kotick.site/speedtest",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -481,7 +515,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-II-MTN | 11",
+            "tag": "GAFN-Lille-II-MTN | 12",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -508,7 +542,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.kotick.site/speedtest",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -517,7 +551,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-II-MTN | 12",
+            "tag": "GAFN-Amsterdam-II-MTN | 13",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -544,7 +578,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.kotick.site/speedtest",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -553,7 +587,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-II-MTN | 13",
+            "tag": "GAFN-Kansas-II-MTN | 14",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -580,7 +614,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.kotick.site/speedtest",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -589,7 +623,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-II-MTN | 14",
+            "tag": "GAFN-Dusseldorf-II-MTN | 15",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -616,7 +650,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.kotick.site/speedtest",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -625,7 +659,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-III-MTN | 15",
+            "tag": "GAFN-Lille-III-MTN-PC | 16",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -652,7 +686,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.kotick.site/speedtest",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -661,7 +695,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-III-MTN | 16",
+            "tag": "GAFN-Amsterdam-III-MTN-PC | 17",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -688,7 +722,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.kotick.site/speedtest",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -697,7 +731,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-III-MTN | 17",
+            "tag": "GAFN-Kansas-III-MTN-PC | 18",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -724,7 +758,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.kotick.site/speedtest",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -733,7 +767,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-III-MTN | 18",
+            "tag": "GAFN-Dusseldorf-III-MTN-PC | 19",
             "type": "vmess",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -760,7 +794,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.kotick.site/speedtest",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -790,11 +824,11 @@
         "override_android_vpn": true,
         "final": "proxy",
         "geoip": {
-            "download_url": "https:\/\/github.com\/malikshi\/sing-box-geo\/releases\/latest\/download\/geoip.db",
+            "download_url": "https:\/\/github.com\/MiSaturo\/sing-box-geoip-ir\/releases\/latest\/download\/geoip.db",
             "download_detour": "direct"
         },
         "geosite": {
-            "download_url": "https:\/\/github.com\/malikshi\/v2ray-rules-dat\/releases\/latest\/download\/geosite.db",
+            "download_url": "https:\/\/github.com\/MasterKia\/iran-hosted-domains\/releases\/latest\/download\/iran-geosite.db",
             "download_detour": "direct"
         },
         "rules": [
@@ -821,6 +855,24 @@
                     "ir"
                 ],
                 "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
             },
             {
                 "ip_cidr": [
