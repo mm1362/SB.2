@@ -100,22 +100,19 @@
                 "Worker-III-SMT | 1",
                 "Worker-III-MD-SMT | 2",
                 "Worker-V-SMT | 3",
-                "Replit-USA-SMT | 4",
-                "Okteto-SMT | 5",
-                "ES-Avatel-SMT | 6",
-                "Worker-IV-MCI | 7",
-                "GAFN-Dusseldorf-SMT | 8",
-                "GAFN-Kansas-SMT | 9",
-                "GAFN-Amsterdam-SMT | 10",
-                "GAFN-Lille-SMT | 11",
-                "GAFN-Lille-II-SMT | 12",
-                "GAFN-Kansas-II-SMT | 13",
-                "GAFN-Amsterdam-II-SMT | 14",
-                "GAFN-Dusseldorf-II-SMT | 15",
-                "GAFN-Lille-III-SMT-PC | 16",
-                "GAFN-Kansas-III-SMT-PC | 17",
-                "GAFN-Amsterdam-III-SMT-PC | 18",
-                "GAFN-Dusseldorf-III-SMT-PC | 19"
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-SMT | 5",
+                "GAFN-Kansas-I-SMT | 6",
+                "GAFN-Amsterdam-I-SMT | 7",
+                "GAFN-Lille-I-SMT | 8",
+                "GAFN-Lille-II-SMT | 9",
+                "GAFN-Kansas-II-SMT | 10",
+                "GAFN-Amsterdam-II-SMT | 11",
+                "GAFN-Dusseldorf-II-SMT | 12",
+                "GAFN-Lille-III-SMT | 13",
+                "GAFN-Kansas-III-SMT | 14",
+                "GAFN-Amsterdam-III-SMT | 15",
+                "GAFN-Dusseldorf-III-SMT | 16"
             ]
         },
         {
@@ -125,22 +122,19 @@
                 "Worker-III-SMT | 1",
                 "Worker-III-MD-SMT | 2",
                 "Worker-V-SMT | 3",
-                "Replit-USA-SMT | 4",
-                "Okteto-SMT | 5",
-                "ES-Avatel-SMT | 6",
-                "Worker-IV-MCI | 7",
-                "GAFN-Dusseldorf-SMT | 8",
-                "GAFN-Kansas-SMT | 9",
-                "GAFN-Amsterdam-SMT | 10",
-                "GAFN-Lille-SMT | 11",
-                "GAFN-Lille-II-SMT | 12",
-                "GAFN-Kansas-II-SMT | 13",
-                "GAFN-Amsterdam-II-SMT | 14",
-                "GAFN-Dusseldorf-II-SMT | 15",
-                "GAFN-Lille-III-SMT-PC | 16",
-                "GAFN-Kansas-III-SMT-PC | 17",
-                "GAFN-Amsterdam-III-SMT-PC | 18",
-                "GAFN-Dusseldorf-III-SMT-PC | 19"
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-SMT | 5",
+                "GAFN-Kansas-I-SMT | 6",
+                "GAFN-Amsterdam-I-SMT | 7",
+                "GAFN-Lille-I-SMT | 8",
+                "GAFN-Lille-II-SMT | 9",
+                "GAFN-Kansas-II-SMT | 10",
+                "GAFN-Amsterdam-II-SMT | 11",
+                "GAFN-Dusseldorf-II-SMT | 12",
+                "GAFN-Lille-III-SMT | 13",
+                "GAFN-Kansas-III-SMT | 14",
+                "GAFN-Amsterdam-III-SMT | 15",
+                "GAFN-Dusseldorf-III-SMT | 16"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -243,103 +237,7 @@
             }
         },
         {
-            "tag": "Replit-USA-SMT | 4",
-            "type": "vless",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "20ac7536-1b8f-4797-8b18-841c7786f99f",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/222.mohammadmoazzen.repl.co\/20ac7536-1b8f-4797-8b18-841c7786f99f-vl",
-                "headers": {
-                    "Host": "rep.rayanbala.ir"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "Okteto-SMT | 5",
-            "type": "vless",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "5862b16a-3e0e-45f8-b168-ad34fcf60f42",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/mms-mm1362.cloud.okteto.net\/vless",
-                "headers": {
-                    "Host": "rep.rayanbala.ir"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "ES-Avatel-SMT | 6",
-            "type": "vless",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "ded67d2e-01df-41d4-a1cc-eb87f72fe80f",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "vpsfree.rayanbala.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/argo-vless",
-                "headers": {
-                    "Host": "vpsfree.rayanbala.ir"
-                },
-                "max_early_data": 2048,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "Worker-IV-MCI | 7",
+            "tag": "Worker-IV-MCI | 4",
             "type": "vless",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -371,7 +269,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-SMT | 8",
+            "tag": "GAFN-Dusseldorf-I-SMT | 5",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -407,7 +305,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-SMT | 9",
+            "tag": "GAFN-Kansas-I-SMT | 6",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -443,7 +341,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-SMT | 10",
+            "tag": "GAFN-Amsterdam-I-SMT | 7",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -479,7 +377,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-SMT | 11",
+            "tag": "GAFN-Lille-I-SMT | 8",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -515,7 +413,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-II-SMT | 12",
+            "tag": "GAFN-Lille-II-SMT | 9",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -551,7 +449,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-II-SMT | 13",
+            "tag": "GAFN-Kansas-II-SMT | 10",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -587,7 +485,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-II-SMT | 14",
+            "tag": "GAFN-Amsterdam-II-SMT | 11",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -623,7 +521,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-II-SMT | 15",
+            "tag": "GAFN-Dusseldorf-II-SMT | 12",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -659,7 +557,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-III-SMT-PC | 16",
+            "tag": "GAFN-Lille-III-SMT | 13",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -695,7 +593,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-III-SMT-PC | 17",
+            "tag": "GAFN-Kansas-III-SMT | 14",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -731,7 +629,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-III-SMT-PC | 18",
+            "tag": "GAFN-Amsterdam-III-SMT | 15",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
@@ -767,7 +665,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-III-SMT-PC | 19",
+            "tag": "GAFN-Dusseldorf-III-SMT | 16",
             "type": "vmess",
             "server": "smt.rayanbala.ir",
             "server_port": 443,
