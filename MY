@@ -1,1 +1,1577 @@
-
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+    "clash_api": {
+      "cache_file": "../cache/clash.db",
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "https://dns.controld.com/bufj620sk1",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "https://dns.controld.com/bufj620sk1",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode:\/\/success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "Worker-III-SMT | 1",
+                "Worker-III-MD-SMT | 2",
+                "Worker-V-SMT | 3",
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-SMT | 5",
+                "GAFN-Kansas-I-SMT | 6",
+                "GAFN-Amsterdam-I-SMT | 7",
+                "GAFN-Lille-I-SMT | 8",
+                "GAFN-Lille-II-SMT | 9",
+                "GAFN-Kansas-II-SMT | 10",
+                "GAFN-Amsterdam-II-SMT | 11",
+                "GAFN-Dusseldorf-II-SMT | 12",
+                "GAFN-Lille-III-SMT | 13",
+                "GAFN-Kansas-III-SMT | 14",
+                "GAFN-Amsterdam-III-SMT | 15",
+                "GAFN-Dusseldorf-III-SMT | 16"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "Worker-III-SMT | 1",
+                "Worker-III-MD-SMT | 2",
+                "Worker-V-SMT | 3",
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-SMT | 5",
+                "GAFN-Kansas-I-SMT | 6",
+                "GAFN-Amsterdam-I-SMT | 7",
+                "GAFN-Lille-I-SMT | 8",
+                "GAFN-Lille-II-SMT | 9",
+                "GAFN-Kansas-II-SMT | 10",
+                "GAFN-Amsterdam-II-SMT | 11",
+                "GAFN-Dusseldorf-II-SMT | 12",
+                "GAFN-Lille-III-SMT | 13",
+                "GAFN-Kansas-III-SMT | 14",
+                "GAFN-Amsterdam-III-SMT | 15",
+                "GAFN-Dusseldorf-III-SMT | 16"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "tag": "Worker-III-SMT | 1",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "aae0527c-5ad5-4a40-b966-fc89e9030083",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-III-MD-SMT | 2",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8472537e-da6f-4c86-89e6-6305c5baa557",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-V-SMT | 3",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "29feaba8-4995-45c6-a93b-2f315c626c18",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker55.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker55.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-IV-MCI | 4",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "88ad2fd8-e7fa-49f5-af06-085d35ced70b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-I-SMT | 5",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-I-SMT | 6",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-I-SMT | 7",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-I-SMT | 8",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-II-SMT | 9",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-II-SMT | 10",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-II-SMT | 11",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-II-SMT | 12",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-III-SMT | 13",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-III-SMT | 14",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-III-SMT | 15",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-III-SMT | 16",
+            "type": "vmess",
+            "server": "smt.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https:\/\/github.com\/MiSaturo\/sing-box-geoip-ir\/releases\/latest\/download\/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https:\/\/github.com\/MasterKia\/iran-hosted-domains\/releases\/latest\/download\/iran-geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
+        ]
+    }
+}
+vmess://eyJhZGQiOiJtdG4ucmF5YW5iYWxhLmlyIiwiYWlkIjoiMCIsImhvc3QiOiI4MC1iMTJmMGRiYzNhODk0YmE0YWZhOTQ0ODZhMTM4NzNlZC5vbnBhdHIuY2xvdWQiLCJpZCI6ImEyZmJiMWRmLTRkNGMtNDgyYy1iYjU4LTAyNmNkN2VlZjZiMiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcyIsInBvcnQiOiI0NDMiLCJwcyI6IlBhdHItTVROIiwic2N5Ijoibm9uZSIsInNuaSI6IjgwLWIxMmYwZGJjM2E4OTRiYTRhZmE5NDQ4NmExMzg3M2VkLm9ucGF0ci5jbG91ZCIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+    "clash_api": {
+      "cache_file": "../cache/clash.db",
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "https://dns.controld.com/bufj620sk1",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "https://dns.controld.com/bufj620sk1",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode:\/\/success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "Worker-III-MTN | 1",
+                "Worker-III-MD-MTN | 2",
+                "Worker-V-MTN | 3",
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-MTN | 5",
+                "GAFN-Kansas-I-MTN | 6",
+                "GAFN-Amsterdam-I-MTN | 7",
+                "GAFN-Lille-I-MTN | 8",
+                "GAFN-Lille-II-MTN | 9",
+                "GAFN-Amsterdam-II-MTN | 10",
+                "GAFN-Kansas-II-MTN | 11",
+                "GAFN-Dusseldorf-II-MTN | 12",
+                "GAFN-Lille-III-MTN | 13",
+                "GAFN-Amsterdam-III-MTN | 14",
+                "GAFN-Kansas-III-MTN | 15",
+                "GAFN-Dusseldorf-III-MTN | 16"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "Worker-III-MTN | 1",
+                "Worker-III-MD-MTN | 2",
+                "Worker-V-MTN | 3",
+                "Worker-IV-MCI | 4",
+                "GAFN-Dusseldorf-I-MTN | 5",
+                "GAFN-Kansas-I-MTN | 6",
+                "GAFN-Amsterdam-I-MTN | 7",
+                "GAFN-Lille-I-MTN | 8",
+                "GAFN-Lille-II-MTN | 9",
+                "GAFN-Amsterdam-II-MTN | 10",
+                "GAFN-Kansas-II-MTN | 11",
+                "GAFN-Dusseldorf-II-MTN | 12",
+                "GAFN-Lille-III-MTN | 13",
+                "GAFN-Amsterdam-III-MTN | 14",
+                "GAFN-Kansas-III-MTN | 15",
+                "GAFN-Dusseldorf-III-MTN | 16"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "tag": "Worker-III-MTN | 1",
+            "type": "vless",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "aae0527c-5ad5-4a40-b966-fc89e9030083",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-III-MD-MTN | 2",
+            "type": "vless",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8472537e-da6f-4c86-89e6-6305c5baa557",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-V-MTN | 3",
+            "type": "vless",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "29feaba8-4995-45c6-a93b-2f315c626c18",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker55.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker55.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "Worker-IV-MCI | 4",
+            "type": "vless",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "88ad2fd8-e7fa-49f5-af06-085d35ced70b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "worker.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": "worker.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-I-MTN | 5",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-I-MTN | 6",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-I-MTN | 7",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-I-MTN | 8",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-II-MTN | 9",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-II-MTN | 10",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-II-MTN | 11",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-II-MTN | 12",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-III-MTN | 13",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-III-MTN | 14",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-III-MTN | 15",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-III-MTN | 16",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https:\/\/github.com\/MiSaturo\/sing-box-geoip-ir\/releases\/latest\/download\/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https:\/\/github.com\/MasterKia\/iran-hosted-domains\/releases\/latest\/download\/iran-geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
+        ]
+    }
+}
