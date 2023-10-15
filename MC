@@ -164,7 +164,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker.rayanbala.ir"
                 },
@@ -196,7 +196,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker.medicaldream.ir"
                 },
@@ -228,7 +228,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker55.medicalsigns.link"
                 },
@@ -260,7 +260,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "/?ed=2048",
                 "headers": {
                     "Host": "worker.msnegar.eu.org"
                 },
