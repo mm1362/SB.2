@@ -1,0 +1,5466 @@
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+    "clash_api": {
+      "cache_file": "../cache/clash.db",
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "76.76.2.155",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "76.76.10.155",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode:\/\/success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "500.medicaldream.ir-HTTPS-8443 | 1",
+                "500.medicaldream.ir-HTTPS-8443-edgetunnel.anycast.eu.org-EDtunnel | 2",
+                "500.rayanbala.ir-HTTPS-8443 | 3",
+                "500.rayanbala.ir-HTTPS-8443-cdn.anycast.eu.org-EDtunnel | 4",
+                "500.rayanbala.ir-HTTPS-8443 | 5",
+                "500.rayanbala.ir-HTTPS-8443-158.178.246.52-EDtunnel | 6",
+                "500.rayanbala.ir-HTTPS-8443 | 7",
+                "500.rayanbala.ir-HTTPS-8443-152.69.221.98-EDtunnel | 8",
+                "500.rayanbala.ir-HTTPS-8443 | 9",
+                "500.rayanbala.ir-HTTPS-8443-158.178.229.189-EDtunnel | 10",
+                "500.medicaldream.ir-HTTPS-8443 | 11",
+                "500.medicaldream.ir-HTTPS-8443-158.178.229.68-EDtunnel | 12",
+                "500.medicaldream.ir-HTTPS-2053 | 13",
+                "500.medicaldream.ir-HTTPS-2053-140.238.10.178-EDtunnel | 14",
+                "500.medicalsigns.link-HTTPS-2053 | 15",
+                "500.medicalsigns.link-HTTPS-2053-193.122.103.122-EDtunnel | 16",
+                "500.medicalsigns.link-HTTPS-2053 | 17",
+                "500.medicalsigns.link-HTTPS-2053-icook.hk-EDtunnel | 18",
+                "500.msnegar.eu.org-HTTPS-2053 | 19",
+                "500.msnegar.eu.org-HTTPS-2053-sp.kjkkk.link-EDtunnel | 20",
+                "500.msnegar.eu.org-HTTPS-2053 | 21",
+                "500.msnegar.eu.org-HTTPS-2053-104.16.60.79-EDtunnel | 22",
+                "500.msnegar.eu.org-HTTPS-2053 | 23",
+                "500.msnegar.eu.org-HTTPS-2053-146.56.152.36-EDtunnel | 24",
+                "500.msnegar.eu.org-HTTPS-2053 | 25",
+                "500.msnegar.eu.org-HTTPS-2053-146.56.154.121-EDtunnel | 26",
+                "500.medicalsigns.link-HTTPS-2053 | 27",
+                "500.medicalsigns.link-HTTPS-2053-132.145.87.158-EDtunnel | 28",
+                "500.medicalsigns.link-HTTPS-2053 | 29",
+                "500.medicalsigns.link-HTTPS-2053-146.56.176.255-EDtunnel | 30",
+                "500.medicaldream.ir-HTTPS-2053 | 31",
+                "500.medicaldream.ir-HTTPS-2053-cdn-all.xn--b6gac.eu.org-EDtunnel | 32",
+                "500.medicaldream.ir-HTTPS-2053 | 33",
+                "500.medicaldream.ir-HTTPS-2053-cdn.xn--b6gac.eu.org-EDtunnel | 34",
+                "500.rayanbala.ir-HTTPS-2053 | 35",
+                "500.rayanbala.ir-HTTPS-2053-cdn-b100.xn--b6gac.eu.org-EDtunnel | 36",
+                "500.rayanbala.ir-HTTPS-2053 | 37",
+                "500.rayanbala.ir-HTTPS-2053-edgetunnel.anycast.eu.org-EDtunnel | 38",
+                "500.rayanbala.ir-HTTPS-2053 | 39",
+                "500.rayanbala.ir-HTTPS-2053-cdn.anycast.eu.org-EDtunnel | 40",
+                "500.rayanbala.ir-HTTPS-2053 | 41",
+                "500.rayanbala.ir-HTTPS-2053-158.178.246.52-EDtunnel | 42",
+                "500.medicaldream.ir-HTTPS-2053 | 43",
+                "500.medicaldream.ir-HTTPS-2053-152.69.221.98-EDtunnel | 44",
+                "500.medicaldream.ir-HTTPS-2053 | 45",
+                "500.medicaldream.ir-HTTPS-2053-158.178.229.189-EDtunnel | 46",
+                "500.medicalsigns.link-HTTPS-2053 | 47",
+                "500.medicalsigns.link-HTTPS-2053-158.178.229.68-EDtunnel | 48",
+                "500.medicalsigns.link-HTTPS-2096 | 49",
+                "500.medicalsigns.link-HTTPS-2096-140.238.10.178-EDtunnel | 50",
+                "500.msnegar.eu.org-HTTPS-2096 | 51",
+                "500.msnegar.eu.org-HTTPS-2096-193.122.103.122-EDtunnel | 52",
+                "500.msnegar.eu.org-HTTPS-2096 | 53",
+                "500.msnegar.eu.org-HTTPS-2096-icook.hk-EDtunnel | 54",
+                "500.msnegar.eu.org-HTTPS-2096 | 55",
+                "500.msnegar.eu.org-HTTPS-2096-sp.kjkkk.link-EDtunnel | 56",
+                "500.msnegar.eu.org-HTTPS-2096 | 57",
+                "500.msnegar.eu.org-HTTPS-2096-104.16.60.79-EDtunnel | 58",
+                "500.medicalsigns.link-HTTPS-2096 | 59",
+                "500.medicalsigns.link-HTTPS-2096-146.56.152.36-EDtunnel | 60",
+                "500.medicalsigns.link-HTTPS-2096 | 61",
+                "500.medicalsigns.link-HTTPS-2096-146.56.154.121-EDtunnel | 62",
+                "500.medicaldream.ir-HTTPS-2096 | 63",
+                "500.medicaldream.ir-HTTPS-2096-132.145.87.158-EDtunnel | 64",
+                "500.medicaldream.ir-HTTPS-2096 | 65",
+                "500.medicaldream.ir-HTTPS-2096-146.56.176.255-EDtunnel | 66",
+                "500.rayanbala.ir-HTTPS-2096 | 67",
+                "500.rayanbala.ir-HTTPS-2096-cdn-all.xn--b6gac.eu.org-EDtunnel | 68",
+                "500.rayanbala.ir-HTTPS-2096 | 69",
+                "500.rayanbala.ir-HTTPS-2096-cdn.xn--b6gac.eu.org-EDtunnel | 70",
+                "500.rayanbala.ir-HTTPS-2096 | 71",
+                "500.rayanbala.ir-HTTPS-2096-cdn-b100.xn--b6gac.eu.org-EDtunnel | 72",
+                "500.rayanbala.ir-HTTPS-2096 | 73",
+                "500.rayanbala.ir-HTTPS-2096-edgetunnel.anycast.eu.org-EDtunnel | 74",
+                "500.medicaldream.ir-HTTPS-2096 | 75",
+                "500.medicaldream.ir-HTTPS-2096-cdn.anycast.eu.org-EDtunnel | 76",
+                "500.medicaldream.ir-HTTPS-2096 | 77",
+                "500.medicaldream.ir-HTTPS-2096-158.178.246.52-EDtunnel | 78",
+                "500.medicalsigns.link-HTTPS-2096 | 79",
+                "500.medicalsigns.link-HTTPS-2096-152.69.221.98-EDtunnel | 80",
+                "500.medicalsigns.link-HTTPS-2096 | 81",
+                "500.medicalsigns.link-HTTPS-2096-158.178.229.189-EDtunnel | 82",
+                "500.msnegar.eu.org-HTTPS-2096 | 83",
+                "500.msnegar.eu.org-HTTPS-2096-158.178.229.68-EDtunnel | 84",
+                "500.msnegar.eu.org-HTTPS-2087 | 85",
+                "500.msnegar.eu.org-HTTPS-2087-140.238.10.178-EDtunnel | 86",
+                "500.msnegar.eu.org-HTTPS-2087 | 87",
+                "500.msnegar.eu.org-HTTPS-2087-193.122.103.122-EDtunnel | 88",
+                "500.msnegar.eu.org-HTTPS-2087 | 89",
+                "500.msnegar.eu.org-HTTPS-2087-icook.hk-EDtunnel | 90",
+                "500.medicalsigns.link-HTTPS-2087 | 91",
+                "500.medicalsigns.link-HTTPS-2087-sp.kjkkk.link-EDtunnel | 92",
+                "500.medicalsigns.link-HTTPS-2087 | 93",
+                "500.medicalsigns.link-HTTPS-2087-104.16.60.79-EDtunnel | 94",
+                "500.medicaldream.ir-HTTPS-2087 | 95",
+                "500.medicaldream.ir-HTTPS-2087-146.56.152.36-EDtunnel | 96",
+                "500.medicaldream.ir-HTTPS-2087 | 97",
+                "500.medicaldream.ir-HTTPS-2087-146.56.154.121-EDtunnel | 98",
+                "500.rayanbala.ir-HTTPS-2087 | 99",
+                "500.rayanbala.ir-HTTPS-2087-132.145.87.158-EDtunnel | 100",
+                "500.rayanbala.ir-HTTPS-2087 | 101",
+                "500.rayanbala.ir-HTTPS-2087-146.56.176.255-EDtunnel | 102",
+                "500.rayanbala.ir-HTTPS-2087 | 103",
+                "500.rayanbala.ir-HTTPS-2087-cdn-all.xn--b6gac.eu.org-EDtunnel | 104",
+                "500.rayanbala.ir-HTTPS-2087 | 105",
+                "500.rayanbala.ir-HTTPS-2087-cdn.xn--b6gac.eu.org-EDtunnel | 106",
+                "500.medicaldream.ir-HTTPS-2087 | 107",
+                "500.medicaldream.ir-HTTPS-2087-cdn-b100.xn--b6gac.eu.org-EDtunnel | 108",
+                "500.medicaldream.ir-HTTPS-2087 | 109",
+                "500.medicaldream.ir-HTTPS-2087-edgetunnel.anycast.eu.org-EDtunnel | 110",
+                "500.rayanbala.ir-HTTPS-2087 | 111",
+                "500.rayanbala.ir-HTTPS-2087-cdn.anycast.eu.org-EDtunnel | 112",
+                "500.rayanbala.ir-HTTPS-2087 | 113",
+                "500.rayanbala.ir-HTTPS-2087-158.178.246.52-EDtunnel | 114",
+                "500.rayanbala.ir-HTTPS-2087 | 115",
+                "500.rayanbala.ir-HTTPS-2087-152.69.221.98-EDtunnel | 116",
+                "500.rayanbala.ir-HTTPS-2087 | 117",
+                "500.rayanbala.ir-HTTPS-2087-158.178.229.189-EDtunnelvless:\/\/4dff5002-5404-4a19-a9fe-d41b1d6ea547@500.medicaldream.ir:2087?encryption=none&security=tls&sni=500.medicaldream.ir&fp=random&type=ws&host=500.medicaldream.ir&path=\/?ed=2048#500.medicaldream.ir-HTTPS-2087 | 118",
+                "500.medicaldream.ir-HTTPS-2087-158.178.229.68-EDtunnel | 119",
+                "500.medicaldream.ir-HTTPS-2083 | 120",
+                "500.medicaldream.ir-HTTPS-2083-140.238.10.178-EDtunnel | 121",
+                "500.medicalsigns.link-HTTPS-2083 | 122",
+                "500.medicalsigns.link-HTTPS-2083-193.122.103.122-EDtunnel | 123",
+                "500.medicalsigns.link-HTTPS-2083 | 124",
+                "500.medicalsigns.link-HTTPS-2083-icook.hk-EDtunnel | 125",
+                "500.msnegar.eu.org-HTTPS-2083 | 126",
+                "500.msnegar.eu.org-HTTPS-2083-sp.kjkkk.link-EDtunnel | 127",
+                "500.msnegar.eu.org-HTTPS-2083 | 128",
+                "500.msnegar.eu.org-HTTPS-2083-104.16.60.79-EDtunnel | 129",
+                "500.msnegar.eu.org-HTTPS-2083 | 130",
+                "500.msnegar.eu.org-HTTPS-2083-146.56.152.36-EDtunnel | 131",
+                "500.msnegar.eu.org-HTTPS-2083 | 132",
+                "500.msnegar.eu.org-HTTPS-2083-146.56.154.121-EDtunnel | 133",
+                "500.medicalsigns.link-HTTPS-2083 | 134",
+                "500.medicalsigns.link-HTTPS-2083-132.145.87.158-EDtunnel | 135",
+                "500.medicalsigns.link-HTTPS-2083 | 136",
+                "500.medicalsigns.link-HTTPS-2083-146.56.176.255-EDtunnel | 137",
+                "500.medicaldream.ir-HTTPS-2083 | 138",
+                "500.medicaldream.ir-HTTPS-2083-cdn-all.xn--b6gac.eu.org-EDtunnel | 139",
+                "500.medicaldream.ir-HTTPS-2083 | 140",
+                "500.medicaldream.ir-HTTPS-2083-cdn.xn--b6gac.eu.org-EDtunnel | 141",
+                "500.rayanbala.ir-HTTPS-2083 | 142",
+                "500.rayanbala.ir-HTTPS-2083-cdn-b100.xn--b6gac.eu.org-EDtunnel | 143",
+                "500.rayanbala.ir-HTTPS-2083 | 144",
+                "500.rayanbala.ir-HTTPS-2083-edgetunnel.anycast.eu.org-EDtunnel | 145",
+                "500.rayanbala.ir-HTTPS-2083 | 146",
+                "500.rayanbala.ir-HTTPS-2083-cdn.anycast.eu.org-EDtunnel | 147",
+                "500.medicaldream.ir-HTTPS-2083 | 148",
+                "500.medicaldream.ir-HTTPS-2083-158.178.246.52-EDtunnel | 149",
+                "500.medicaldream.ir-HTTPS-2083 | 150",
+                "500.medicaldream.ir-HTTPS-2083-152.69.221.98-EDtunnel | 151",
+                "500.medicalsigns.link-HTTPS-2083 | 152",
+                "500.medicalsigns.link-HTTPS-2083-158.178.229.189-EDtunnel | 153",
+                "500.medicalsigns.link-HTTPS-2083 | 154",
+                "500.medicalsigns.link-HTTPS-2083-158.178.229.68-EDtunnel | 155"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "500.medicaldream.ir-HTTPS-8443 | 1",
+                "500.medicaldream.ir-HTTPS-8443-edgetunnel.anycast.eu.org-EDtunnel | 2",
+                "500.rayanbala.ir-HTTPS-8443 | 3",
+                "500.rayanbala.ir-HTTPS-8443-cdn.anycast.eu.org-EDtunnel | 4",
+                "500.rayanbala.ir-HTTPS-8443 | 5",
+                "500.rayanbala.ir-HTTPS-8443-158.178.246.52-EDtunnel | 6",
+                "500.rayanbala.ir-HTTPS-8443 | 7",
+                "500.rayanbala.ir-HTTPS-8443-152.69.221.98-EDtunnel | 8",
+                "500.rayanbala.ir-HTTPS-8443 | 9",
+                "500.rayanbala.ir-HTTPS-8443-158.178.229.189-EDtunnel | 10",
+                "500.medicaldream.ir-HTTPS-8443 | 11",
+                "500.medicaldream.ir-HTTPS-8443-158.178.229.68-EDtunnel | 12",
+                "500.medicaldream.ir-HTTPS-2053 | 13",
+                "500.medicaldream.ir-HTTPS-2053-140.238.10.178-EDtunnel | 14",
+                "500.medicalsigns.link-HTTPS-2053 | 15",
+                "500.medicalsigns.link-HTTPS-2053-193.122.103.122-EDtunnel | 16",
+                "500.medicalsigns.link-HTTPS-2053 | 17",
+                "500.medicalsigns.link-HTTPS-2053-icook.hk-EDtunnel | 18",
+                "500.msnegar.eu.org-HTTPS-2053 | 19",
+                "500.msnegar.eu.org-HTTPS-2053-sp.kjkkk.link-EDtunnel | 20",
+                "500.msnegar.eu.org-HTTPS-2053 | 21",
+                "500.msnegar.eu.org-HTTPS-2053-104.16.60.79-EDtunnel | 22",
+                "500.msnegar.eu.org-HTTPS-2053 | 23",
+                "500.msnegar.eu.org-HTTPS-2053-146.56.152.36-EDtunnel | 24",
+                "500.msnegar.eu.org-HTTPS-2053 | 25",
+                "500.msnegar.eu.org-HTTPS-2053-146.56.154.121-EDtunnel | 26",
+                "500.medicalsigns.link-HTTPS-2053 | 27",
+                "500.medicalsigns.link-HTTPS-2053-132.145.87.158-EDtunnel | 28",
+                "500.medicalsigns.link-HTTPS-2053 | 29",
+                "500.medicalsigns.link-HTTPS-2053-146.56.176.255-EDtunnel | 30",
+                "500.medicaldream.ir-HTTPS-2053 | 31",
+                "500.medicaldream.ir-HTTPS-2053-cdn-all.xn--b6gac.eu.org-EDtunnel | 32",
+                "500.medicaldream.ir-HTTPS-2053 | 33",
+                "500.medicaldream.ir-HTTPS-2053-cdn.xn--b6gac.eu.org-EDtunnel | 34",
+                "500.rayanbala.ir-HTTPS-2053 | 35",
+                "500.rayanbala.ir-HTTPS-2053-cdn-b100.xn--b6gac.eu.org-EDtunnel | 36",
+                "500.rayanbala.ir-HTTPS-2053 | 37",
+                "500.rayanbala.ir-HTTPS-2053-edgetunnel.anycast.eu.org-EDtunnel | 38",
+                "500.rayanbala.ir-HTTPS-2053 | 39",
+                "500.rayanbala.ir-HTTPS-2053-cdn.anycast.eu.org-EDtunnel | 40",
+                "500.rayanbala.ir-HTTPS-2053 | 41",
+                "500.rayanbala.ir-HTTPS-2053-158.178.246.52-EDtunnel | 42",
+                "500.medicaldream.ir-HTTPS-2053 | 43",
+                "500.medicaldream.ir-HTTPS-2053-152.69.221.98-EDtunnel | 44",
+                "500.medicaldream.ir-HTTPS-2053 | 45",
+                "500.medicaldream.ir-HTTPS-2053-158.178.229.189-EDtunnel | 46",
+                "500.medicalsigns.link-HTTPS-2053 | 47",
+                "500.medicalsigns.link-HTTPS-2053-158.178.229.68-EDtunnel | 48",
+                "500.medicalsigns.link-HTTPS-2096 | 49",
+                "500.medicalsigns.link-HTTPS-2096-140.238.10.178-EDtunnel | 50",
+                "500.msnegar.eu.org-HTTPS-2096 | 51",
+                "500.msnegar.eu.org-HTTPS-2096-193.122.103.122-EDtunnel | 52",
+                "500.msnegar.eu.org-HTTPS-2096 | 53",
+                "500.msnegar.eu.org-HTTPS-2096-icook.hk-EDtunnel | 54",
+                "500.msnegar.eu.org-HTTPS-2096 | 55",
+                "500.msnegar.eu.org-HTTPS-2096-sp.kjkkk.link-EDtunnel | 56",
+                "500.msnegar.eu.org-HTTPS-2096 | 57",
+                "500.msnegar.eu.org-HTTPS-2096-104.16.60.79-EDtunnel | 58",
+                "500.medicalsigns.link-HTTPS-2096 | 59",
+                "500.medicalsigns.link-HTTPS-2096-146.56.152.36-EDtunnel | 60",
+                "500.medicalsigns.link-HTTPS-2096 | 61",
+                "500.medicalsigns.link-HTTPS-2096-146.56.154.121-EDtunnel | 62",
+                "500.medicaldream.ir-HTTPS-2096 | 63",
+                "500.medicaldream.ir-HTTPS-2096-132.145.87.158-EDtunnel | 64",
+                "500.medicaldream.ir-HTTPS-2096 | 65",
+                "500.medicaldream.ir-HTTPS-2096-146.56.176.255-EDtunnel | 66",
+                "500.rayanbala.ir-HTTPS-2096 | 67",
+                "500.rayanbala.ir-HTTPS-2096-cdn-all.xn--b6gac.eu.org-EDtunnel | 68",
+                "500.rayanbala.ir-HTTPS-2096 | 69",
+                "500.rayanbala.ir-HTTPS-2096-cdn.xn--b6gac.eu.org-EDtunnel | 70",
+                "500.rayanbala.ir-HTTPS-2096 | 71",
+                "500.rayanbala.ir-HTTPS-2096-cdn-b100.xn--b6gac.eu.org-EDtunnel | 72",
+                "500.rayanbala.ir-HTTPS-2096 | 73",
+                "500.rayanbala.ir-HTTPS-2096-edgetunnel.anycast.eu.org-EDtunnel | 74",
+                "500.medicaldream.ir-HTTPS-2096 | 75",
+                "500.medicaldream.ir-HTTPS-2096-cdn.anycast.eu.org-EDtunnel | 76",
+                "500.medicaldream.ir-HTTPS-2096 | 77",
+                "500.medicaldream.ir-HTTPS-2096-158.178.246.52-EDtunnel | 78",
+                "500.medicalsigns.link-HTTPS-2096 | 79",
+                "500.medicalsigns.link-HTTPS-2096-152.69.221.98-EDtunnel | 80",
+                "500.medicalsigns.link-HTTPS-2096 | 81",
+                "500.medicalsigns.link-HTTPS-2096-158.178.229.189-EDtunnel | 82",
+                "500.msnegar.eu.org-HTTPS-2096 | 83",
+                "500.msnegar.eu.org-HTTPS-2096-158.178.229.68-EDtunnel | 84",
+                "500.msnegar.eu.org-HTTPS-2087 | 85",
+                "500.msnegar.eu.org-HTTPS-2087-140.238.10.178-EDtunnel | 86",
+                "500.msnegar.eu.org-HTTPS-2087 | 87",
+                "500.msnegar.eu.org-HTTPS-2087-193.122.103.122-EDtunnel | 88",
+                "500.msnegar.eu.org-HTTPS-2087 | 89",
+                "500.msnegar.eu.org-HTTPS-2087-icook.hk-EDtunnel | 90",
+                "500.medicalsigns.link-HTTPS-2087 | 91",
+                "500.medicalsigns.link-HTTPS-2087-sp.kjkkk.link-EDtunnel | 92",
+                "500.medicalsigns.link-HTTPS-2087 | 93",
+                "500.medicalsigns.link-HTTPS-2087-104.16.60.79-EDtunnel | 94",
+                "500.medicaldream.ir-HTTPS-2087 | 95",
+                "500.medicaldream.ir-HTTPS-2087-146.56.152.36-EDtunnel | 96",
+                "500.medicaldream.ir-HTTPS-2087 | 97",
+                "500.medicaldream.ir-HTTPS-2087-146.56.154.121-EDtunnel | 98",
+                "500.rayanbala.ir-HTTPS-2087 | 99",
+                "500.rayanbala.ir-HTTPS-2087-132.145.87.158-EDtunnel | 100",
+                "500.rayanbala.ir-HTTPS-2087 | 101",
+                "500.rayanbala.ir-HTTPS-2087-146.56.176.255-EDtunnel | 102",
+                "500.rayanbala.ir-HTTPS-2087 | 103",
+                "500.rayanbala.ir-HTTPS-2087-cdn-all.xn--b6gac.eu.org-EDtunnel | 104",
+                "500.rayanbala.ir-HTTPS-2087 | 105",
+                "500.rayanbala.ir-HTTPS-2087-cdn.xn--b6gac.eu.org-EDtunnel | 106",
+                "500.medicaldream.ir-HTTPS-2087 | 107",
+                "500.medicaldream.ir-HTTPS-2087-cdn-b100.xn--b6gac.eu.org-EDtunnel | 108",
+                "500.medicaldream.ir-HTTPS-2087 | 109",
+                "500.medicaldream.ir-HTTPS-2087-edgetunnel.anycast.eu.org-EDtunnel | 110",
+                "500.rayanbala.ir-HTTPS-2087 | 111",
+                "500.rayanbala.ir-HTTPS-2087-cdn.anycast.eu.org-EDtunnel | 112",
+                "500.rayanbala.ir-HTTPS-2087 | 113",
+                "500.rayanbala.ir-HTTPS-2087-158.178.246.52-EDtunnel | 114",
+                "500.rayanbala.ir-HTTPS-2087 | 115",
+                "500.rayanbala.ir-HTTPS-2087-152.69.221.98-EDtunnel | 116",
+                "500.rayanbala.ir-HTTPS-2087 | 117",
+                "500.rayanbala.ir-HTTPS-2087-158.178.229.189-EDtunnelvless:\/\/4dff5002-5404-4a19-a9fe-d41b1d6ea547@500.medicaldream.ir:2087?encryption=none&security=tls&sni=500.medicaldream.ir&fp=random&type=ws&host=500.medicaldream.ir&path=\/?ed=2048#500.medicaldream.ir-HTTPS-2087 | 118",
+                "500.medicaldream.ir-HTTPS-2087-158.178.229.68-EDtunnel | 119",
+                "500.medicaldream.ir-HTTPS-2083 | 120",
+                "500.medicaldream.ir-HTTPS-2083-140.238.10.178-EDtunnel | 121",
+                "500.medicalsigns.link-HTTPS-2083 | 122",
+                "500.medicalsigns.link-HTTPS-2083-193.122.103.122-EDtunnel | 123",
+                "500.medicalsigns.link-HTTPS-2083 | 124",
+                "500.medicalsigns.link-HTTPS-2083-icook.hk-EDtunnel | 125",
+                "500.msnegar.eu.org-HTTPS-2083 | 126",
+                "500.msnegar.eu.org-HTTPS-2083-sp.kjkkk.link-EDtunnel | 127",
+                "500.msnegar.eu.org-HTTPS-2083 | 128",
+                "500.msnegar.eu.org-HTTPS-2083-104.16.60.79-EDtunnel | 129",
+                "500.msnegar.eu.org-HTTPS-2083 | 130",
+                "500.msnegar.eu.org-HTTPS-2083-146.56.152.36-EDtunnel | 131",
+                "500.msnegar.eu.org-HTTPS-2083 | 132",
+                "500.msnegar.eu.org-HTTPS-2083-146.56.154.121-EDtunnel | 133",
+                "500.medicalsigns.link-HTTPS-2083 | 134",
+                "500.medicalsigns.link-HTTPS-2083-132.145.87.158-EDtunnel | 135",
+                "500.medicalsigns.link-HTTPS-2083 | 136",
+                "500.medicalsigns.link-HTTPS-2083-146.56.176.255-EDtunnel | 137",
+                "500.medicaldream.ir-HTTPS-2083 | 138",
+                "500.medicaldream.ir-HTTPS-2083-cdn-all.xn--b6gac.eu.org-EDtunnel | 139",
+                "500.medicaldream.ir-HTTPS-2083 | 140",
+                "500.medicaldream.ir-HTTPS-2083-cdn.xn--b6gac.eu.org-EDtunnel | 141",
+                "500.rayanbala.ir-HTTPS-2083 | 142",
+                "500.rayanbala.ir-HTTPS-2083-cdn-b100.xn--b6gac.eu.org-EDtunnel | 143",
+                "500.rayanbala.ir-HTTPS-2083 | 144",
+                "500.rayanbala.ir-HTTPS-2083-edgetunnel.anycast.eu.org-EDtunnel | 145",
+                "500.rayanbala.ir-HTTPS-2083 | 146",
+                "500.rayanbala.ir-HTTPS-2083-cdn.anycast.eu.org-EDtunnel | 147",
+                "500.medicaldream.ir-HTTPS-2083 | 148",
+                "500.medicaldream.ir-HTTPS-2083-158.178.246.52-EDtunnel | 149",
+                "500.medicaldream.ir-HTTPS-2083 | 150",
+                "500.medicaldream.ir-HTTPS-2083-152.69.221.98-EDtunnel | 151",
+                "500.medicalsigns.link-HTTPS-2083 | 152",
+                "500.medicalsigns.link-HTTPS-2083-158.178.229.189-EDtunnel | 153",
+                "500.medicalsigns.link-HTTPS-2083 | 154",
+                "500.medicalsigns.link-HTTPS-2083-158.178.229.68-EDtunnel | 155"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-8443 | 1",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 8443,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-8443-edgetunnel.anycast.eu.org-EDtunnel | 2",
+            "type": "vless",
+            "server": "edgetunnel.anycast.eu.org",
+            "server_port": 8443,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443 | 3",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443-cdn.anycast.eu.org-EDtunnel | 4",
+            "type": "vless",
+            "server": "cdn.anycast.eu.org",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443 | 5",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443-158.178.246.52-EDtunnel | 6",
+            "type": "vless",
+            "server": "158.178.246.52",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443 | 7",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443-152.69.221.98-EDtunnel | 8",
+            "type": "vless",
+            "server": "152.69.221.98",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443 | 9",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-8443-158.178.229.189-EDtunnel | 10",
+            "type": "vless",
+            "server": "158.178.229.189",
+            "server_port": 8443,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-8443 | 11",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 8443,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-8443-158.178.229.68-EDtunnel | 12",
+            "type": "vless",
+            "server": "158.178.229.68",
+            "server_port": 8443,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053 | 13",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053-140.238.10.178-EDtunnel | 14",
+            "type": "vless",
+            "server": "140.238.10.178",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053 | 15",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053-193.122.103.122-EDtunnel | 16",
+            "type": "vless",
+            "server": "193.122.103.122",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053 | 17",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053-icook.hk-EDtunnel | 18",
+            "type": "vless",
+            "server": "icook.hk",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053 | 19",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053-sp.kjkkk.link-EDtunnel | 20",
+            "type": "vless",
+            "server": "sp.kjkkk.link",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053 | 21",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053-104.16.60.79-EDtunnel | 22",
+            "type": "vless",
+            "server": "104.16.60.79",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053 | 23",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053-146.56.152.36-EDtunnel | 24",
+            "type": "vless",
+            "server": "146.56.152.36",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053 | 25",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2053-146.56.154.121-EDtunnel | 26",
+            "type": "vless",
+            "server": "146.56.154.121",
+            "server_port": 2053,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053 | 27",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053-132.145.87.158-EDtunnel | 28",
+            "type": "vless",
+            "server": "132.145.87.158",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053 | 29",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053-146.56.176.255-EDtunnel | 30",
+            "type": "vless",
+            "server": "146.56.176.255",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053 | 31",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053-cdn-all.xn--b6gac.eu.org-EDtunnel | 32",
+            "type": "vless",
+            "server": "cdn-all.xn--b6gac.eu.org",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053 | 33",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053-cdn.xn--b6gac.eu.org-EDtunnel | 34",
+            "type": "vless",
+            "server": "cdn.xn--b6gac.eu.org",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053 | 35",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053-cdn-b100.xn--b6gac.eu.org-EDtunnel | 36",
+            "type": "vless",
+            "server": "cdn-b100.xn--b6gac.eu.org",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053 | 37",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053-edgetunnel.anycast.eu.org-EDtunnel | 38",
+            "type": "vless",
+            "server": "edgetunnel.anycast.eu.org",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053 | 39",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053-cdn.anycast.eu.org-EDtunnel | 40",
+            "type": "vless",
+            "server": "cdn.anycast.eu.org",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053 | 41",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2053-158.178.246.52-EDtunnel | 42",
+            "type": "vless",
+            "server": "158.178.246.52",
+            "server_port": 2053,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053 | 43",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053-152.69.221.98-EDtunnel | 44",
+            "type": "vless",
+            "server": "152.69.221.98",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053 | 45",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2053-158.178.229.189-EDtunnel | 46",
+            "type": "vless",
+            "server": "158.178.229.189",
+            "server_port": 2053,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053 | 47",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2053-158.178.229.68-EDtunnel | 48",
+            "type": "vless",
+            "server": "158.178.229.68",
+            "server_port": 2053,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096 | 49",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096-140.238.10.178-EDtunnel | 50",
+            "type": "vless",
+            "server": "140.238.10.178",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096 | 51",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096-193.122.103.122-EDtunnel | 52",
+            "type": "vless",
+            "server": "193.122.103.122",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096 | 53",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096-icook.hk-EDtunnel | 54",
+            "type": "vless",
+            "server": "icook.hk",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096 | 55",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096-sp.kjkkk.link-EDtunnel | 56",
+            "type": "vless",
+            "server": "sp.kjkkk.link",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096 | 57",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096-104.16.60.79-EDtunnel | 58",
+            "type": "vless",
+            "server": "104.16.60.79",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096 | 59",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096-146.56.152.36-EDtunnel | 60",
+            "type": "vless",
+            "server": "146.56.152.36",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096 | 61",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096-146.56.154.121-EDtunnel | 62",
+            "type": "vless",
+            "server": "146.56.154.121",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096 | 63",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096-132.145.87.158-EDtunnel | 64",
+            "type": "vless",
+            "server": "132.145.87.158",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096 | 65",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096-146.56.176.255-EDtunnel | 66",
+            "type": "vless",
+            "server": "146.56.176.255",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096 | 67",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096-cdn-all.xn--b6gac.eu.org-EDtunnel | 68",
+            "type": "vless",
+            "server": "cdn-all.xn--b6gac.eu.org",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096 | 69",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096-cdn.xn--b6gac.eu.org-EDtunnel | 70",
+            "type": "vless",
+            "server": "cdn.xn--b6gac.eu.org",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096 | 71",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096-cdn-b100.xn--b6gac.eu.org-EDtunnel | 72",
+            "type": "vless",
+            "server": "cdn-b100.xn--b6gac.eu.org",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096 | 73",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2096-edgetunnel.anycast.eu.org-EDtunnel | 74",
+            "type": "vless",
+            "server": "edgetunnel.anycast.eu.org",
+            "server_port": 2096,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096 | 75",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096-cdn.anycast.eu.org-EDtunnel | 76",
+            "type": "vless",
+            "server": "cdn.anycast.eu.org",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096 | 77",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2096-158.178.246.52-EDtunnel | 78",
+            "type": "vless",
+            "server": "158.178.246.52",
+            "server_port": 2096,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096 | 79",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096-152.69.221.98-EDtunnel | 80",
+            "type": "vless",
+            "server": "152.69.221.98",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096 | 81",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2096-158.178.229.189-EDtunnel | 82",
+            "type": "vless",
+            "server": "158.178.229.189",
+            "server_port": 2096,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096 | 83",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2096-158.178.229.68-EDtunnel | 84",
+            "type": "vless",
+            "server": "158.178.229.68",
+            "server_port": 2096,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087 | 85",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087-140.238.10.178-EDtunnel | 86",
+            "type": "vless",
+            "server": "140.238.10.178",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087 | 87",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087-193.122.103.122-EDtunnel | 88",
+            "type": "vless",
+            "server": "193.122.103.122",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087 | 89",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2087-icook.hk-EDtunnel | 90",
+            "type": "vless",
+            "server": "icook.hk",
+            "server_port": 2087,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2087 | 91",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2087,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2087-sp.kjkkk.link-EDtunnel | 92",
+            "type": "vless",
+            "server": "sp.kjkkk.link",
+            "server_port": 2087,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2087 | 93",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2087,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2087-104.16.60.79-EDtunnel | 94",
+            "type": "vless",
+            "server": "104.16.60.79",
+            "server_port": 2087,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087 | 95",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087-146.56.152.36-EDtunnel | 96",
+            "type": "vless",
+            "server": "146.56.152.36",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087 | 97",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087-146.56.154.121-EDtunnel | 98",
+            "type": "vless",
+            "server": "146.56.154.121",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 99",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-132.145.87.158-EDtunnel | 100",
+            "type": "vless",
+            "server": "132.145.87.158",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 101",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-146.56.176.255-EDtunnel | 102",
+            "type": "vless",
+            "server": "146.56.176.255",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 103",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-cdn-all.xn--b6gac.eu.org-EDtunnel | 104",
+            "type": "vless",
+            "server": "cdn-all.xn--b6gac.eu.org",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 105",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-cdn.xn--b6gac.eu.org-EDtunnel | 106",
+            "type": "vless",
+            "server": "cdn.xn--b6gac.eu.org",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087 | 107",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087-cdn-b100.xn--b6gac.eu.org-EDtunnel | 108",
+            "type": "vless",
+            "server": "cdn-b100.xn--b6gac.eu.org",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087 | 109",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087-edgetunnel.anycast.eu.org-EDtunnel | 110",
+            "type": "vless",
+            "server": "edgetunnel.anycast.eu.org",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 111",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-cdn.anycast.eu.org-EDtunnel | 112",
+            "type": "vless",
+            "server": "cdn.anycast.eu.org",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 113",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-158.178.246.52-EDtunnel | 114",
+            "type": "vless",
+            "server": "158.178.246.52",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 115",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-152.69.221.98-EDtunnel | 116",
+            "type": "vless",
+            "server": "152.69.221.98",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087 | 117",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2087-158.178.229.189-EDtunnelvless:\/\/4dff5002-5404-4a19-a9fe-d41b1d6ea547@500.medicaldream.ir:2087?encryption=none&security=tls&sni=500.medicaldream.ir&fp=random&type=ws&host=500.medicaldream.ir&path=\/?ed=2048#500.medicaldream.ir-HTTPS-2087 | 118",
+            "type": "vless",
+            "server": "158.178.229.189",
+            "server_port": 2087,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2087-158.178.229.68-EDtunnel | 119",
+            "type": "vless",
+            "server": "158.178.229.68",
+            "server_port": 2087,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083 | 120",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083-140.238.10.178-EDtunnel | 121",
+            "type": "vless",
+            "server": "140.238.10.178",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 122",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-193.122.103.122-EDtunnel | 123",
+            "type": "vless",
+            "server": "193.122.103.122",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 124",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-icook.hk-EDtunnel | 125",
+            "type": "vless",
+            "server": "icook.hk",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083 | 126",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083-sp.kjkkk.link-EDtunnel | 127",
+            "type": "vless",
+            "server": "sp.kjkkk.link",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083 | 128",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083-104.16.60.79-EDtunnel | 129",
+            "type": "vless",
+            "server": "104.16.60.79",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083 | 130",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083-146.56.152.36-EDtunnel | 131",
+            "type": "vless",
+            "server": "146.56.152.36",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083 | 132",
+            "type": "vless",
+            "server": "500.msnegar.eu.org",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.msnegar.eu.org-HTTPS-2083-146.56.154.121-EDtunnel | 133",
+            "type": "vless",
+            "server": "146.56.154.121",
+            "server_port": 2083,
+            "uuid": "0677eb70-229f-43d5-8882-258fbd3d332b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 134",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-132.145.87.158-EDtunnel | 135",
+            "type": "vless",
+            "server": "132.145.87.158",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 136",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-146.56.176.255-EDtunnel | 137",
+            "type": "vless",
+            "server": "146.56.176.255",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083 | 138",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083-cdn-all.xn--b6gac.eu.org-EDtunnel | 139",
+            "type": "vless",
+            "server": "cdn-all.xn--b6gac.eu.org",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083 | 140",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083-cdn.xn--b6gac.eu.org-EDtunnel | 141",
+            "type": "vless",
+            "server": "cdn.xn--b6gac.eu.org",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083 | 142",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083-cdn-b100.xn--b6gac.eu.org-EDtunnel | 143",
+            "type": "vless",
+            "server": "cdn-b100.xn--b6gac.eu.org",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083 | 144",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083-edgetunnel.anycast.eu.org-EDtunnel | 145",
+            "type": "vless",
+            "server": "edgetunnel.anycast.eu.org",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083 | 146",
+            "type": "vless",
+            "server": "500.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.rayanbala.ir-HTTPS-2083-cdn.anycast.eu.org-EDtunnel | 147",
+            "type": "vless",
+            "server": "cdn.anycast.eu.org",
+            "server_port": 2083,
+            "uuid": "50f98aa2-d1a2-4469-81b9-11396e930853",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.rayanbala.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.rayanbala.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083 | 148",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083-158.178.246.52-EDtunnel | 149",
+            "type": "vless",
+            "server": "158.178.246.52",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083 | 150",
+            "type": "vless",
+            "server": "500.medicaldream.ir",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicaldream.ir-HTTPS-2083-152.69.221.98-EDtunnel | 151",
+            "type": "vless",
+            "server": "152.69.221.98",
+            "server_port": 2083,
+            "uuid": "4dff5002-5404-4a19-a9fe-d41b1d6ea547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 152",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-158.178.229.189-EDtunnel | 153",
+            "type": "vless",
+            "server": "158.178.229.189",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083 | 154",
+            "type": "vless",
+            "server": "500.medicalsigns.link",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "500.medicalsigns.link-HTTPS-2083-158.178.229.68-EDtunnel | 155",
+            "type": "vless",
+            "server": "158.178.229.68",
+            "server_port": 2083,
+            "uuid": "8e36a95a-2047-4b3e-8936-2a1a3f86d2bf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "500.medicalsigns.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "500.medicalsigns.link"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https:\/\/github.com\/MiSaturo\/sing-box-geoip-ir\/releases\/latest\/download\/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https:\/\/github.com\/MasterKia\/iran-hosted-domains\/releases\/latest\/download\/iran-geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
+        ]
+    }
+}
