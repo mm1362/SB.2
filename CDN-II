@@ -20,7 +20,7 @@
                 "tag": "dns-remote"
             },
             {
-                "address": "76.76.2.155",
+                "address": "local",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
