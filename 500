@@ -14,13 +14,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https://dns.controld.com/bufj620sk1",
+                "address": "local",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https://dns.controld.com/bufj620sk1",
+                "address": "76.76.2.155",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
