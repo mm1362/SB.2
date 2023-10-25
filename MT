@@ -14,13 +14,13 @@
     "dns": {
         "servers": [
             {
-                "address": "https://dns.controld.com/bufj620sk1",
+                "address": "76.76.2.155",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "https://dns.controld.com/bufj620sk1",
+                "address": "76.76.10.155",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
@@ -100,7 +100,7 @@
                 "Worker-III-MTN | 1",
                 "Worker-III-MD-MTN | 2",
                 "Worker-V-MTN | 3",
-                "Worker-IV-MCI | 4",
+                "Worker-IV-MTN | 4",
                 "GAFN-Dusseldorf-I-MTN | 5",
                 "GAFN-Kansas-I-MTN | 6",
                 "GAFN-Amsterdam-I-MTN | 7",
@@ -112,7 +112,11 @@
                 "GAFN-Lille-III-MTN | 13",
                 "GAFN-Amsterdam-III-MTN | 14",
                 "GAFN-Kansas-III-MTN | 15",
-                "GAFN-Dusseldorf-III-MTN | 16"
+                "GAFN-Dusseldorf-III-MTN | 16",
+                "GAFN-Amsterdam-IV-MTN | 17",
+                "GAFN-Kansas-IV-MTN | 18",
+                "GAFN-Lille-IV-MTN | 19",
+                "GAFN-Dusseldorf-IV-MTN | 20"
             ]
         },
         {
@@ -122,7 +126,7 @@
                 "Worker-III-MTN | 1",
                 "Worker-III-MD-MTN | 2",
                 "Worker-V-MTN | 3",
-                "Worker-IV-MCI | 4",
+                "Worker-IV-MTN | 4",
                 "GAFN-Dusseldorf-I-MTN | 5",
                 "GAFN-Kansas-I-MTN | 6",
                 "GAFN-Amsterdam-I-MTN | 7",
@@ -134,7 +138,11 @@
                 "GAFN-Lille-III-MTN | 13",
                 "GAFN-Amsterdam-III-MTN | 14",
                 "GAFN-Kansas-III-MTN | 15",
-                "GAFN-Dusseldorf-III-MTN | 16"
+                "GAFN-Dusseldorf-III-MTN | 16",
+                "GAFN-Amsterdam-IV-MTN | 17",
+                "GAFN-Kansas-IV-MTN | 18",
+                "GAFN-Lille-IV-MTN | 19",
+                "GAFN-Dusseldorf-IV-MTN | 20"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -237,7 +245,7 @@
             }
         },
         {
-            "tag": "Worker-IV-MCI | 4",
+            "tag": "Worker-IV-MTN | 4",
             "type": "vless",
             "server": "mtn.rayanbala.ir",
             "server_port": 443,
@@ -695,6 +703,150 @@
                 "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-IV-MTN | 17",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-IV-MTN | 18",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-IV-MTN | 19",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-IV-MTN | 20",
+            "type": "vmess",
+            "server": "mtn.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
