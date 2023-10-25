@@ -112,7 +112,11 @@
                 "GAFN-Dusseldorf-III-MCI | 13",
                 "GAFN-Kansas-III-MCI | 14",
                 "GAFN-Amsterdam-III-MCI | 15",
-                "GAFN-Lille-III-MCI | 16"
+                "GAFN-Lille-III-MCI | 16",
+                "GAFN-Amsterdam-IV-MCI | 17",
+                "GAFN-Kansas-IV-MCI | 18",
+                "GAFN-Lille-IV-MCI | 19",
+                "GAFN-Dusseldorf-IV-MCI | 20"
             ]
         },
         {
@@ -134,7 +138,11 @@
                 "GAFN-Dusseldorf-III-MCI | 13",
                 "GAFN-Kansas-III-MCI | 14",
                 "GAFN-Amsterdam-III-MCI | 15",
-                "GAFN-Lille-III-MCI | 16"
+                "GAFN-Lille-III-MCI | 16",
+                "GAFN-Amsterdam-IV-MCI | 17",
+                "GAFN-Kansas-IV-MCI | 18",
+                "GAFN-Lille-IV-MCI | 19",
+                "GAFN-Dusseldorf-IV-MCI | 20"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -695,6 +703,150 @@
                 "path": "\/Lille.bobbykotick.rip\/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Amsterdam-IV-MCI | 17",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Kansas-IV-MCI | 18",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Lille-IV-MCI | 19",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-IV-MCI | 20",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
