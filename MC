@@ -102,21 +102,25 @@
                 "Worker-V-MCI | 3",
                 "Worker-IV-MCI | 4",
                 "GAFN-Dusseldorf-I-MCI | 5",
-                "GAFN-Kansas-I-MCI | 6",
-                "GAFN-Amsterdam-I-MCI | 7",
-                "GAFN-Lille-I-MCI | 8",
-                "GAFN-Lille-II-MCI | 9",
-                "GAFN-Amsterdam-II-MCI | 10",
-                "GAFN-Dusseldorf-II-MCI | 11",
-                "GAFN-Kansas-II-MCI | 12",
-                "GAFN-Dusseldorf-III-MCI | 13",
-                "GAFN-Kansas-III-MCI | 14",
-                "GAFN-Amsterdam-III-MCI | 15",
-                "GAFN-Lille-III-MCI | 16",
-                "GAFN-Amsterdam-IV-MCI | 17",
-                "GAFN-Kansas-IV-MCI | 18",
-                "GAFN-Lille-IV-MCI | 19",
-                "GAFN-Dusseldorf-IV-MCI | 20"
+                "GAFN-LosAngeles-MCI | 6",
+                "GAFN-Kansas-I-MCI | 7",
+                "GAFN-Amsterdam-I-MCI | 8",
+                "GAFN-Lille-I-MCI | 9",
+                "GAFN-LosAngeles-II-MCI | 10",
+                "GAFN-Lille-II-MCI | 11",
+                "GAFN-Amsterdam-II-MCI | 12",
+                "GAFN-Dusseldorf-II-MCI | 13",
+                "GAFN-Kansas-II-MCI | 14",
+                "GAFN-LosAngeles-III-MCI | 15",
+                "GAFN-Dusseldorf-III-MCI | 16",
+                "GAFN-Kansas-III-MCI | 17",
+                "GAFN-Amsterdam-III-MCI | 18",
+                "GAFN-Lille-III-MCI | 19",
+                "GAFN-LosAngeles-IV-MCI | 20",
+                "GAFN-Amsterdam-IV-MCI | 21",
+                "GAFN-Kansas-IV-MCI | 22",
+                "GAFN-Lille-IV-MCI | 23",
+                "GAFN-Dusseldorf-IV-MCI | 24"
             ]
         },
         {
@@ -128,21 +132,25 @@
                 "Worker-V-MCI | 3",
                 "Worker-IV-MCI | 4",
                 "GAFN-Dusseldorf-I-MCI | 5",
-                "GAFN-Kansas-I-MCI | 6",
-                "GAFN-Amsterdam-I-MCI | 7",
-                "GAFN-Lille-I-MCI | 8",
-                "GAFN-Lille-II-MCI | 9",
-                "GAFN-Amsterdam-II-MCI | 10",
-                "GAFN-Dusseldorf-II-MCI | 11",
-                "GAFN-Kansas-II-MCI | 12",
-                "GAFN-Dusseldorf-III-MCI | 13",
-                "GAFN-Kansas-III-MCI | 14",
-                "GAFN-Amsterdam-III-MCI | 15",
-                "GAFN-Lille-III-MCI | 16",
-                "GAFN-Amsterdam-IV-MCI | 17",
-                "GAFN-Kansas-IV-MCI | 18",
-                "GAFN-Lille-IV-MCI | 19",
-                "GAFN-Dusseldorf-IV-MCI | 20"
+                "GAFN-LosAngeles-MCI | 6",
+                "GAFN-Kansas-I-MCI | 7",
+                "GAFN-Amsterdam-I-MCI | 8",
+                "GAFN-Lille-I-MCI | 9",
+                "GAFN-LosAngeles-II-MCI | 10",
+                "GAFN-Lille-II-MCI | 11",
+                "GAFN-Amsterdam-II-MCI | 12",
+                "GAFN-Dusseldorf-II-MCI | 13",
+                "GAFN-Kansas-II-MCI | 14",
+                "GAFN-LosAngeles-III-MCI | 15",
+                "GAFN-Dusseldorf-III-MCI | 16",
+                "GAFN-Kansas-III-MCI | 17",
+                "GAFN-Amsterdam-III-MCI | 18",
+                "GAFN-Lille-III-MCI | 19",
+                "GAFN-LosAngeles-IV-MCI | 20",
+                "GAFN-Amsterdam-IV-MCI | 21",
+                "GAFN-Kansas-IV-MCI | 22",
+                "GAFN-Lille-IV-MCI | 23",
+                "GAFN-Dusseldorf-IV-MCI | 24"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -304,7 +312,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -313,7 +321,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-I-MCI | 6",
+            "tag": "GAFN-LosAngeles-MCI | 6",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -340,7 +348,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "path": "/LosAngeles.Kotick.site/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -349,7 +357,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-I-MCI | 7",
+            "tag": "GAFN-Kansas-I-MCI | 7",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -376,7 +384,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "path": "/Kansas.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -385,7 +393,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-I-MCI | 8",
+            "tag": "GAFN-Amsterdam-I-MCI | 8",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -412,7 +420,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "path": "/Amsterdam.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.rayanbala.ir"
                 },
@@ -421,7 +429,43 @@
             }
         },
         {
-            "tag": "GAFN-Lille-II-MCI | 9",
+            "tag": "GAFN-Lille-I-MCI | 9",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.rayanbala.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Lille.bobbykotick.rip/speedtest",
+                "headers": {
+                    "Host": "rep.rayanbala.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-LosAngeles-II-MCI | 10",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -448,7 +492,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "path": "/LosAngeles.Kotick.site/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -457,7 +501,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-II-MCI | 10",
+            "tag": "GAFN-Lille-II-MCI | 11",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -484,7 +528,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "path": "/Lille.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -493,7 +537,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-II-MCI | 11",
+            "tag": "GAFN-Amsterdam-II-MCI | 12",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -520,7 +564,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "path": "/Amsterdam.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -529,7 +573,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-II-MCI | 12",
+            "tag": "GAFN-Dusseldorf-II-MCI | 13",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -556,7 +600,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicaldream.ir"
                 },
@@ -565,7 +609,43 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-III-MCI | 13",
+            "tag": "GAFN-Kansas-II-MCI | 14",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicaldream.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Kansas.bobbykotick.rip/speedtest",
+                "headers": {
+                    "Host": "rep.medicaldream.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-LosAngeles-III-MCI | 15",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -592,7 +672,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "path": "/LosAngeles.Kotick.site/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -601,7 +681,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-III-MCI | 14",
+            "tag": "GAFN-Dusseldorf-III-MCI | 16",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -628,7 +708,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -637,7 +717,7 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-III-MCI | 15",
+            "tag": "GAFN-Kansas-III-MCI | 17",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -664,7 +744,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "path": "/Kansas.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -673,7 +753,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-III-MCI | 16",
+            "tag": "GAFN-Amsterdam-III-MCI | 18",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -700,7 +780,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "path": "/Amsterdam.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.medicalsigns.link"
                 },
@@ -709,7 +789,43 @@
             }
         },
         {
-            "tag": "GAFN-Amsterdam-IV-MCI | 17",
+            "tag": "GAFN-Lille-III-MCI | 19",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.medicalsigns.link",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Lille.bobbykotick.rip/speedtest",
+                "headers": {
+                    "Host": "rep.medicalsigns.link"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-LosAngeles-IV-MCI | 20",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -736,7 +852,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Amsterdam.bobbykotick.rip\/speedtest",
+                "path": "/LosAngeles.Kotick.site/speedtest",
                 "headers": {
                     "Host": "rep.msnegar.eu.org"
                 },
@@ -745,7 +861,7 @@
             }
         },
         {
-            "tag": "GAFN-Kansas-IV-MCI | 18",
+            "tag": "GAFN-Amsterdam-IV-MCI | 21",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -772,7 +888,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Kansas.bobbykotick.rip\/speedtest",
+                "path": "/Amsterdam.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.msnegar.eu.org"
                 },
@@ -781,7 +897,7 @@
             }
         },
         {
-            "tag": "GAFN-Lille-IV-MCI | 19",
+            "tag": "GAFN-Kansas-IV-MCI | 22",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -808,7 +924,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Lille.bobbykotick.rip\/speedtest",
+                "path": "/Kansas.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.msnegar.eu.org"
                 },
@@ -817,7 +933,7 @@
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-IV-MCI | 20",
+            "tag": "GAFN-Lille-IV-MCI | 23",
             "type": "vmess",
             "server": "mci.rayanbala.ir",
             "server_port": 443,
@@ -844,7 +960,43 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/Dusseldorf.bobbykotick.rip\/speedtest",
+                "path": "/Lille.bobbykotick.rip/speedtest",
+                "headers": {
+                    "Host": "rep.msnegar.eu.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GAFN-Dusseldorf-IV-MCI | 24",
+            "type": "vmess",
+            "server": "mci.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "rep.msnegar.eu.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
                 "headers": {
                     "Host": "rep.msnegar.eu.org"
                 },
