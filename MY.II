@@ -20,7 +20,7 @@
                 "tag": "dns-remote"
             },
             {
-                "address": "76.76.10.121",
+                "address": "local",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
@@ -97,10 +97,10 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "✓ •ch @zeusvpn_official 🇩🇪 | 1",
-                "✓ •ch @zeusvpn_official 🇬🇧 | 2",
-                "✓ •ch @zeusvpn_official 🇨🇦 | 3",
-                "✓ •ch @zeusvpn_official 🇺🇲 | 4",
+                "zeusvpn_official 🇩🇪 | 1",
+                "zeusvpn_official 🇬🇧 | 2",
+                "zeusvpn_official 🇨🇦 | 3",
+                "zeusvpn_official 🇺🇲 | 4",
                 "@GOOD_V2RAYY👑 🇬🇧  | 5",
                 "@GOOD_V2RAYY👑 🇩🇪  | 6",
                 "🇩🇪DE | VLESS | MTN | 0 | 7",
@@ -513,10 +513,10 @@
                 "kryptos 1 ID(@Outline_Vpn) | 414",
                 "kryptos 2 ID(@Outline_Vpn) | 415",
                 "kryptos 4 ID(@Outline_Vpn) | 416",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 417",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 418",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 419",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 420",
+                "3333 | 417",
+                "4444 | 418",
+                "555 | 419",
+                "666 | 420",
                 "4-FR🇫🇷@vpn_xw | 421",
                 "nimvpnir | 422",
                 "4-NL🇳🇱@vpn_xw | 423",
@@ -524,8 +524,8 @@
                 "Join @V2rayNGn | 425",
                 "QV2RAYCHANNEL | 426",
                 "QV2RAYCHANNEL | 427",
-                "SwedeN†²🇸🇪 | 428",
-                "Netherlands†🇳🇱 | 429",
+                "SwedeN | 428",
+                "Netherlands | 429",
                 "Germany†🇩🇪 | 430",
                 "Vienna†🇦🇹 | 431",
                 "Paris†🇫🇷 | 432",
@@ -559,10 +559,10 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "✓ •ch @zeusvpn_official 🇩🇪 | 1",
-                "✓ •ch @zeusvpn_official 🇬🇧 | 2",
-                "✓ •ch @zeusvpn_official 🇨🇦 | 3",
-                "✓ •ch @zeusvpn_official 🇺🇲 | 4",
+                "zeusvpn_official 🇩🇪 | 1",
+                "zeusvpn_official 🇬🇧 | 2",
+                "zeusvpn_official 🇨🇦 | 3",
+                "zeusvpn_official 🇺🇲 | 4",
                 "@GOOD_V2RAYY👑 🇬🇧  | 5",
                 "@GOOD_V2RAYY👑 🇩🇪  | 6",
                 "🇩🇪DE | VLESS | MTN | 0 | 7",
@@ -975,10 +975,10 @@
                 "kryptos 1 ID(@Outline_Vpn) | 414",
                 "kryptos 2 ID(@Outline_Vpn) | 415",
                 "kryptos 4 ID(@Outline_Vpn) | 416",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 417",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 418",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 419",
-                "@vmess_vless_v2rayng | تلگرام عضو بشید | 420",
+                "3333 | 417",
+                "4444 | 418",
+                "555 | 419",
+                "666 | 420",
                 "4-FR🇫🇷@vpn_xw | 421",
                 "nimvpnir | 422",
                 "4-NL🇳🇱@vpn_xw | 423",
@@ -986,8 +986,8 @@
                 "Join @V2rayNGn | 425",
                 "QV2RAYCHANNEL | 426",
                 "QV2RAYCHANNEL | 427",
-                "SwedeN†²🇸🇪 | 428",
-                "Netherlands†🇳🇱 | 429",
+                "SwedeN | 428",
+                "Netherlands | 429",
                 "Germany†🇩🇪 | 430",
                 "Vienna†🇦🇹 | 431",
                 "Paris†🇫🇷 | 432",
@@ -1021,7 +1021,7 @@
             "tolerance": 50
         },
         {
-            "tag": "✓ •ch @zeusvpn_official 🇩🇪 | 1",
+            "tag": "zeusvpn_official 🇩🇪 | 1",
             "type": "vmess",
             "server": "104.16.149.227",
             "server_port": 2083,
@@ -1055,7 +1055,7 @@
             }
         },
         {
-            "tag": "✓ •ch @zeusvpn_official 🇬🇧 | 2",
+            "tag": "zeusvpn_official 🇬🇧 | 2",
             "type": "vmess",
             "server": "104.16.149.227",
             "server_port": 2083,
@@ -1089,7 +1089,7 @@
             }
         },
         {
-            "tag": "✓ •ch @zeusvpn_official 🇨🇦 | 3",
+            "tag": "zeusvpn_official 🇨🇦 | 3",
             "type": "vmess",
             "server": "104.16.149.227",
             "server_port": 2083,
@@ -1123,7 +1123,7 @@
             }
         },
         {
-            "tag": "✓ •ch @zeusvpn_official 🇺🇲 | 4",
+            "tag": "zeusvpn_official 🇺🇲 | 4",
             "type": "vmess",
             "server": "104.16.149.227",
             "server_port": 2083,
@@ -1701,7 +1701,7 @@
             "server": "172.67.212.212",
             "server_port": 2053,
             "uuid": "06e87d4a-314d-4651-af86-d4f55624159a",
-            "flow": "xtls-rprx-vision",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -12792,7 +12792,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | تلگرام عضو بشید | 417",
+            "tag": "3333 | 417",
             "type": "vless",
             "server": "faav-join.outline-vpn.cloud",
             "server_port": 80,
@@ -12815,7 +12815,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | تلگرام عضو بشید | 418",
+            "tag": "4444 | 418",
             "type": "vless",
             "server": "faav-join.outline-vpn.cloud",
             "server_port": 2082,
@@ -12838,7 +12838,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | تلگرام عضو بشید | 419",
+            "tag": "555 | 419",
             "type": "vless",
             "server": "04join-to.outline-vpn.cloud",
             "server_port": 2095,
@@ -12861,7 +12861,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | تلگرام عضو بشید | 420",
+            "tag": "666 | 420",
             "type": "vless",
             "server": "104.21.12.150",
             "server_port": 2082,
@@ -13064,7 +13064,7 @@
             }
         },
         {
-            "tag": "SwedeN†²🇸🇪 | 428",
+            "tag": "SwedeN | 428",
             "type": "vmess",
             "server": "16.171.13.95",
             "server_port": 43921,
@@ -13081,7 +13081,7 @@
             }
         },
         {
-            "tag": "Netherlands†🇳🇱 | 429",
+            "tag": "Netherlands | 429",
             "type": "vless",
             "server": "xio.vpnxw.eu.org",
             "server_port": 2086,
