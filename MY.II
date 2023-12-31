@@ -14,7 +14,7 @@
     "dns": {
         "servers": [
             {
-                "address": "76.76.2.121",
+                "address": "https://dns.controld.com/23apy6xz7ww",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
