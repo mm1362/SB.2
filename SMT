@@ -14,7 +14,7 @@
     "dns": {
         "servers": [
             {
-                "address": "76.76.2.121",
+                "address": "https://8.8.8.8/dns-query",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
@@ -97,71 +97,139 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "Worker-III-SMT | 1",
-                "Worker-III-MD-SMT | 2",
-                "Worker-V-SMT | 3",
-                "Worker-IV-SMT | 4",
-                "GAFN-Dusseldorf-I-SMT | 5",
-                "GAFN-Kansas-I-SMT | 6",
-                "GAFN-LosAngeles-SMT | 7",
-                "GAFN-Amsterdam-I-SMT | 8",
-                "GAFN-Lille-I-SMT | 9",
-                "GAFN-LosAngeles-II-SMT | 10",
-                "GAFN-Lille-II-SMT | 11",
-                "GAFN-Kansas-II-SMT | 12",
-                "GAFN-Amsterdam-II-SMT | 13",
-                "GAFN-Dusseldorf-II-SMT | 14",
-                "GAFN-LosAngeles-III-SMT | 15",
-                "GAFN-Lille-III-SMT | 16",
-                "GAFN-Kansas-III-SMT | 17",
-                "GAFN-Amsterdam-III-SMT | 18",
-                "GAFN-Dusseldorf-III-SMT | 19",
-                "GAFN-LosAngeles-IV-SMT | 20",
-                "GAFN-Amsterdam-IV-SMT | 21",
-                "GAFN-Kansas-IV-SMT | 22",
-                "GAFN-Lille-IV-SMT | 23",
-                "GAFN-Dusseldorf-IV-SMT | 24"
+                "amoo.mms1362.workers.dev | 1",
+                "amoo.mms1362.workers.dev | 2",
+                "amoo.mms1362.workers.dev | 3",
+                "amoo.mms1362.workers.dev | 4",
+                "amoo.mms1362.workers.dev | 5",
+                "amoo.mms1362.workers.dev | 6",
+                "amoo.rayanbala.ir | 7",
+                "amoo.rayanbala.ir | 8",
+                "amoo.rayanbala.ir | 9",
+                "amoo.rayanbala.ir | 10",
+                "amoo.rayanbala.ir | 11",
+                "amoo.rayanbala.ir | 12",
+                "amoo.rayanbala.ir | 13",
+                "amoo.rayanbala.ir | 14",
+                "amoo.rayanbala.ir | 15",
+                "amoo.rayanbala.ir | 16",
+                "amoo.medical2023.workers.dev | 17",
+                "amoo.medical2023.workers.dev | 18",
+                "amoo.medical2023.workers.dev | 19",
+                "amoo.medical2023.workers.dev | 20",
+                "amoo.medical2023.workers.dev | 21",
+                "amoo.medical2023.workers.dev | 22",
+                "amoo.medicaldream.ir | 23",
+                "amoo.medicaldream.ir | 24",
+                "amoo.medicaldream.ir | 25",
+                "amoo.medicaldream.ir | 26",
+                "amoo.medicaldream.ir | 27",
+                "amoo.medicaldream.ir | 28",
+                "amoo.medicaldream.ir | 29",
+                "amoo.medicaldream.ir | 30",
+                "amoo.medicaldream.ir | 31",
+                "amoo.medicaldream.ir | 32",
+                "amoo.rayan1.workers.dev | 33",
+                "amoo.rayan1.workers.dev | 34",
+                "amoo.rayan1.workers.dev | 35",
+                "amoo.rayan1.workers.dev | 36",
+                "amoo.rayan1.workers.dev | 37",
+                "amoo.rayan1.workers.dev | 38",
+                "amoo.rayan1.workers.dev | 39",
+                "amoo.rayan1.workers.dev | 40",
+                "amoo.rayan1.workers.dev | 41",
+                "amoo.rayan1.workers.dev | 42",
+                "amoo.mms2.workers.dev | 43",
+                "amoo.mms2.workers.dev | 44",
+                "amoo.mms2.workers.dev | 45",
+                "amoo.mms2.workers.dev | 46",
+                "amoo.mms2.workers.dev | 47",
+                "amoo.mms2.workers.dev | 48",
+                "amoo.msnegar.eu.org | 49",
+                "amoo.msnegar.eu.org | 50",
+                "amoo.msnegar.eu.org | 51",
+                "amoo.msnegar.eu.org | 52",
+                "amoo.msnegar.eu.org | 53",
+                "amoo.msnegar.eu.org | 54",
+                "amoo.msnegar.eu.org | 55",
+                "amoo.msnegar.eu.org | 56",
+                "amoo.msnegar.eu.org | 57",
+                "amoo.msnegar.eu.org | 58"
             ]
         },
         {
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "Worker-III-SMT | 1",
-                "Worker-III-MD-SMT | 2",
-                "Worker-V-SMT | 3",
-                "Worker-IV-SMT | 4",
-                "GAFN-Dusseldorf-I-SMT | 5",
-                "GAFN-Kansas-I-SMT | 6",
-                "GAFN-LosAngeles-SMT | 7",
-                "GAFN-Amsterdam-I-SMT | 8",
-                "GAFN-Lille-I-SMT | 9",
-                "GAFN-LosAngeles-II-SMT | 10",
-                "GAFN-Lille-II-SMT | 11",
-                "GAFN-Kansas-II-SMT | 12",
-                "GAFN-Amsterdam-II-SMT | 13",
-                "GAFN-Dusseldorf-II-SMT | 14",
-                "GAFN-LosAngeles-III-SMT | 15",
-                "GAFN-Lille-III-SMT | 16",
-                "GAFN-Kansas-III-SMT | 17",
-                "GAFN-Amsterdam-III-SMT | 18",
-                "GAFN-Dusseldorf-III-SMT | 19",
-                "GAFN-LosAngeles-IV-SMT | 20",
-                "GAFN-Amsterdam-IV-SMT | 21",
-                "GAFN-Kansas-IV-SMT | 22",
-                "GAFN-Lille-IV-SMT | 23",
-                "GAFN-Dusseldorf-IV-SMT | 24"
+                "amoo.mms1362.workers.dev | 1",
+                "amoo.mms1362.workers.dev | 2",
+                "amoo.mms1362.workers.dev | 3",
+                "amoo.mms1362.workers.dev | 4",
+                "amoo.mms1362.workers.dev | 5",
+                "amoo.mms1362.workers.dev | 6",
+                "amoo.rayanbala.ir | 7",
+                "amoo.rayanbala.ir | 8",
+                "amoo.rayanbala.ir | 9",
+                "amoo.rayanbala.ir | 10",
+                "amoo.rayanbala.ir | 11",
+                "amoo.rayanbala.ir | 12",
+                "amoo.rayanbala.ir | 13",
+                "amoo.rayanbala.ir | 14",
+                "amoo.rayanbala.ir | 15",
+                "amoo.rayanbala.ir | 16",
+                "amoo.medical2023.workers.dev | 17",
+                "amoo.medical2023.workers.dev | 18",
+                "amoo.medical2023.workers.dev | 19",
+                "amoo.medical2023.workers.dev | 20",
+                "amoo.medical2023.workers.dev | 21",
+                "amoo.medical2023.workers.dev | 22",
+                "amoo.medicaldream.ir | 23",
+                "amoo.medicaldream.ir | 24",
+                "amoo.medicaldream.ir | 25",
+                "amoo.medicaldream.ir | 26",
+                "amoo.medicaldream.ir | 27",
+                "amoo.medicaldream.ir | 28",
+                "amoo.medicaldream.ir | 29",
+                "amoo.medicaldream.ir | 30",
+                "amoo.medicaldream.ir | 31",
+                "amoo.medicaldream.ir | 32",
+                "amoo.rayan1.workers.dev | 33",
+                "amoo.rayan1.workers.dev | 34",
+                "amoo.rayan1.workers.dev | 35",
+                "amoo.rayan1.workers.dev | 36",
+                "amoo.rayan1.workers.dev | 37",
+                "amoo.rayan1.workers.dev | 38",
+                "amoo.rayan1.workers.dev | 39",
+                "amoo.rayan1.workers.dev | 40",
+                "amoo.rayan1.workers.dev | 41",
+                "amoo.rayan1.workers.dev | 42",
+                "amoo.mms2.workers.dev | 43",
+                "amoo.mms2.workers.dev | 44",
+                "amoo.mms2.workers.dev | 45",
+                "amoo.mms2.workers.dev | 46",
+                "amoo.mms2.workers.dev | 47",
+                "amoo.mms2.workers.dev | 48",
+                "amoo.msnegar.eu.org | 49",
+                "amoo.msnegar.eu.org | 50",
+                "amoo.msnegar.eu.org | 51",
+                "amoo.msnegar.eu.org | 52",
+                "amoo.msnegar.eu.org | 53",
+                "amoo.msnegar.eu.org | 54",
+                "amoo.msnegar.eu.org | 55",
+                "amoo.msnegar.eu.org | 56",
+                "amoo.msnegar.eu.org | 57",
+                "amoo.msnegar.eu.org | 58"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "3m",
+            "interval": "10m",
             "tolerance": 50
         },
         {
-            "tag": "Worker-III-SMT | 1",
+            "tag": "amoo.mms1362.workers.dev | 1",
             "type": "vless",
-            "server": "smt.rayanbala.ir",
+            "server": "amoo.mms1362.workers.dev",
             "server_port": 443,
-            "uuid": "aae0527c-5ad5-4a40-b966-fc89e9030083",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -171,7 +239,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "worker.rayanbala.ir",
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -180,20 +248,20 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
-                    "Host": "worker.rayanbala.ir"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "Worker-III-MD-SMT | 2",
+            "tag": "amoo.mms1362.workers.dev | 2",
             "type": "vless",
-            "server": "smt.rayanbala.ir",
+            "server": "amoo.mms1362.workers.dev",
             "server_port": 443,
-            "uuid": "8472537e-da6f-4c86-89e6-6305c5baa557",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -203,7 +271,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "worker.medicaldream.ir",
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -212,20 +280,20 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
-                    "Host": "worker.medicaldream.ir"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "Worker-V-SMT | 3",
+            "tag": "amoo.mms1362.workers.dev | 3",
             "type": "vless",
-            "server": "smt.rayanbala.ir",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "29feaba8-4995-45c6-a93b-2f315c626c18",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -235,7 +303,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "worker55.medicalsigns.link",
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -244,20 +312,20 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
-                    "Host": "worker55.medicalsigns.link"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "Worker-IV-SMT | 4",
+            "tag": "amoo.mms1362.workers.dev | 4",
             "type": "vless",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "88ad2fd8-e7fa-49f5-af06-085d35ced70b",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -267,7 +335,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "worker.msnegar.eu.org",
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -276,25 +344,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/?ed=2048",
+                "path": "\/",
                 "headers": {
-                    "Host": "worker.msnegar.eu.org"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-I-SMT | 5",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.mms1362.workers.dev | 5",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -302,9 +367,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -312,25 +376,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.rayanbala.ir"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Kansas-I-SMT | 6",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "tag": "amoo.mms1362.workers.dev | 6",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -338,9 +399,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.Mms1362.WorKers.Dev",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -348,25 +408,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.rayanbala.ir"
+                    "Host": "Amoo.Mms1362.WorKers.Dev"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-LosAngeles-SMT | 7",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.rayanbala.ir | 7",
+            "type": "vless",
+            "server": "amoo.rayanbala.ir",
             "server_port": 443,
-            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -374,9 +431,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -384,25 +440,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/LosAngeles.Kotick.site/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.rayanbala.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Amsterdam-I-SMT | 8",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.rayanbala.ir | 8",
+            "type": "vless",
+            "server": "amoo.rayanbala.ir",
             "server_port": 443,
-            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -410,9 +463,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -420,25 +472,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.rayanbala.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Lille-I-SMT | 9",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.rayanbala.ir | 9",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "34F89D0B-AAB5-4F42-A476-0D7667CD3954",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -446,9 +495,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.rayanbala.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -456,25 +504,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.rayanbala.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-LosAngeles-II-SMT | 10",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "tag": "amoo.rayanbala.ir | 10",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -482,9 +527,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicaldream.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -492,25 +536,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/LosAngeles.Kotick.site/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicaldream.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Lille-II-SMT | 11",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.rayanbala.ir | 11",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -518,9 +559,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicaldream.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -528,25 +568,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicaldream.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Kansas-II-SMT | 12",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "tag": "amoo.rayanbala.ir | 12",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -554,9 +591,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicaldream.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -564,25 +600,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicaldream.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Amsterdam-II-SMT | 13",
-            "type": "vmess",
+            "tag": "amoo.rayanbala.ir | 13",
+            "type": "vless",
             "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "server_port": 2096,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -590,9 +623,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicaldream.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -600,25 +632,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicaldream.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-II-SMT | 14",
-            "type": "vmess",
+            "tag": "amoo.rayanbala.ir | 14",
+            "type": "vless",
             "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "F5E0BCF3-E102-4D94-A838-47AA759CCACB",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "server_port": 2053,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -626,9 +655,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicaldream.ir",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -636,25 +664,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicaldream.ir"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-LosAngeles-III-SMT | 15",
-            "type": "vmess",
+            "tag": "amoo.rayanbala.ir | 15",
+            "type": "vless",
             "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "server_port": 2083,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -662,9 +687,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicalsigns.link",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -672,25 +696,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/LosAngeles.Kotick.site/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicalsigns.link"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Lille-III-SMT | 16",
-            "type": "vmess",
+            "tag": "amoo.rayanbala.ir | 16",
+            "type": "vless",
             "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "server_port": 8443,
+            "uuid": "ef54aae8-c2e4-425d-978b-a36bd13dbab3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -698,9 +719,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicalsigns.link",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.rayanbala.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -708,25 +728,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicalsigns.link"
+                    "Host": "amoo.rayanbala.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Kansas-III-SMT | 17",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medical2023.workers.dev | 17",
+            "type": "vless",
+            "server": "amoo.medical2023.workers.dev",
             "server_port": 443,
-            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -734,9 +751,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicalsigns.link",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -744,25 +760,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicalsigns.link"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Amsterdam-III-SMT | 18",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medical2023.workers.dev | 18",
+            "type": "vless",
+            "server": "amoo.medical2023.workers.dev",
             "server_port": 443,
-            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -770,9 +783,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicalsigns.link",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -780,25 +792,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicalsigns.link"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-III-SMT | 19",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medical2023.workers.dev | 19",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "145E162D-2BDD-451B-8196-75A50D118502",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -806,9 +815,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.medicalsigns.link",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -816,25 +824,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.medicalsigns.link"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-LosAngeles-IV-SMT | 20",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "tag": "amoo.medical2023.workers.dev | 20",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -842,9 +847,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.msnegar.eu.org",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -852,25 +856,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/LosAngeles.Kotick.site/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.msnegar.eu.org"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Amsterdam-IV-SMT | 21",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medical2023.workers.dev | 21",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
             "server_port": 443,
-            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -878,9 +879,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.msnegar.eu.org",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -888,25 +888,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Amsterdam.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.msnegar.eu.org"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Kansas-IV-SMT | 22",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
-            "server_port": 443,
-            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "tag": "amoo.medical2023.workers.dev | 22",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -914,9 +911,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.msnegar.eu.org",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "Amoo.MediCal2023.WorkErs.DeV",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -924,25 +920,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Kansas.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.msnegar.eu.org"
+                    "Host": "Amoo.MediCal2023.WorkErs.DeV"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Lille-IV-SMT | 23",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medicaldream.ir | 23",
+            "type": "vless",
+            "server": "amoo.medicaldream.ir",
             "server_port": 443,
-            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -950,9 +943,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.msnegar.eu.org",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -960,25 +952,22 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Lille.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.msnegar.eu.org"
+                    "Host": "amoo.medicaldream.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GAFN-Dusseldorf-IV-SMT | 24",
-            "type": "vmess",
-            "server": "smt.rayanbala.ir",
+            "tag": "amoo.medicaldream.ir | 24",
+            "type": "vless",
+            "server": "amoo.medicaldream.ir",
             "server_port": 443,
-            "uuid": "8642A168-3D7F-4162-A5DA-B0DCB4E5273E",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -986,9 +975,8 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "rep.msnegar.eu.org",
-                "insecure": true,
-                "disable_sni": false,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
@@ -996,11 +984,1099 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/Dusseldorf.bobbykotick.rip/speedtest",
+                "path": "\/",
                 "headers": {
-                    "Host": "rep.msnegar.eu.org"
+                    "Host": "amoo.medicaldream.ir"
                 },
-                "max_early_data": 0,
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 25",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 26",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 27",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 28",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 29",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 30",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 31",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.medicaldream.ir | 32",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "22eef160-e090-45aa-a1e5-3b371ba775a3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.medicaldream.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.medicaldream.ir"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 33",
+            "type": "vless",
+            "server": "amoo.rayan1.workers.dev",
+            "server_port": 443,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 34",
+            "type": "vless",
+            "server": "amoo.rayan1.workers.dev",
+            "server_port": 443,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 35",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 36",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 37",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 38",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 39",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 40",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 41",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.rayan1.workers.dev | 42",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "09ee71b4-725b-4e38-8592-579248d3f55f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmOo.RayAn1.WorkeRs.DeV",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmOo.RayAn1.WorkeRs.DeV"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 43",
+            "type": "vless",
+            "server": "amoo.mms2.workers.dev",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEvworkers.dev"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 44",
+            "type": "vless",
+            "server": "amoo.mms2.workers.dev",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEv"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 45",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEv"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 46",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEv"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 47",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEv"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.mms2.workers.dev | 48",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "AmoO.MmS2.WoRkErs.DEv",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "AmoO.MmS2.WoRkErs.DEv"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 49",
+            "type": "vless",
+            "server": "amoo.msnegar.eu.org",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 50",
+            "type": "vless",
+            "server": "amoo.msnegar.eu.org",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 51",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 52",
+            "type": "vless",
+            "server": "mci3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 53",
+            "type": "vless",
+            "server": "smt2.rayanbala.ir",
+            "server_port": 443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 54",
+            "type": "vless",
+            "server": "smt3.rayanbala.ir",
+            "server_port": 2087,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 55",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2096,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 56",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2053,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 57",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 2083,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "amoo.msnegar.eu.org | 58",
+            "type": "vless",
+            "server": "smt.rayanbala.ir",
+            "server_port": 8443,
+            "uuid": "bdc1f885-6393-48e8-b9b4-fcbd1f73e2c8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "amoo.msnegar.eu.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "amoo.msnegar.eu.org"
+                },
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
