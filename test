@@ -157,6 +157,9 @@
     },
     "stats": {}
 }
+
+vless://8472537e-da6f-4c86-89e6-6305c5baa557@mtn.rayanbala.ir:443?encryption=none&security=tls&sni=worker.medicaldream.ir&fp=chrome&type=ws&host=worker.medicaldream.ir&path=%2F%3Fed%3D2048#Worker-III-MD-MTN
+
 {
     "dns": {
         "hosts": {
